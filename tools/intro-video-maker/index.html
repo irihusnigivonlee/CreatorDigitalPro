@@ -1,249 +1,138 @@
 <!doctype html>
-
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>CreatorDigitalPro Intro Studio</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <div class="app-wrapper">
-      <!-- ================================================= -->
-      <!-- SIDEBAR -->
-      <!-- ================================================= -->
-
-      <aside class="sidebar">
-        <div class="studio-brand">
-          <h2>CreatorDigitalPro</h2>
-
-          <span>INTRO VIDEO STUDIO</span>
-        </div>
-
-        <div class="editor-card">
-          <div class="editor-badge">INTRO GENERATOR</div>
-
-          <h1>Intro Studio</h1>
-
-          <p>Professional Intro Video Maker</p>
-        </div>
-
-        <!-- ===================================== -->
-        <!-- TEMPLATE -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Template Intro</label>
-
-          <select id="templateSelect">
-            <option value="modern">Modern</option>
-
-            <option value="gaming">Gaming</option>
-
-            <option value="corporate">Corporate</option>
-
-            <option value="neon">Neon</option>
-
-            <option value="cinematic">Cinematic</option>
-          </select>
-        </div>
-
-        <!-- ===================================== -->
-        <!-- TITLE -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Judul Intro</label>
-
-          <textarea id="titleInput" rows="4">WELCOME TO MY CHANNEL</textarea>
-        </div>
-
-        <!-- ===================================== -->
-        <!-- SUBTITLE -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Sub Judul</label>
-
-          <textarea id="subtitleInput" rows="3">
-CreatorDigitalPro Studio</textarea
-          >
-        </div>
-
-        <!-- ===================================== -->
-        <!-- LOGO -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Upload Logo</label>
-
-          <input type="file" id="logoInput" accept="image/*" />
-        </div>
-
-        <!-- ===================================== -->
-        <!-- BACKGROUND -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Upload Background</label>
-
-          <input type="file" id="bgInput" accept="image/*" />
-        </div>
-
-        <!-- ===================================== -->
-        <!-- MUSIC -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Upload Musik</label>
-
-          <input type="file" id="musicInput" accept="audio/*" />
-        </div>
-
-        <!-- ===================================== -->
-        <!-- LOGO SIZE -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Ukuran Logo</label>
-
-          <input type="range" id="logoSize" min="50" max="500" value="220" />
-        </div>
-
-        <!-- ===================================== -->
-        <!-- TITLE SIZE -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Ukuran Judul</label>
-
-          <input type="range" id="titleSize" min="40" max="180" value="120" />
-        </div>
-
-        <!-- ===================================== -->
-        <!-- SUBTITLE SIZE -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Ukuran Subtitle</label>
-
-          <input type="range" id="subtitleSize" min="20" max="60" value="42" />
-        </div>
-
-        <!-- ===================================== -->
-        <!-- COLOR -->
-        <!-- ===================================== -->
-
-        <div class="form-group">
-          <label>Warna Judul</label>
-
-          <input type="color" id="titleColor" value="#ffffff" />
-
-          <label>Warna Subtitle</label>
-
-          <input type="color" id="subtitleColor" value="#00d4ff" />
-        </div>
-
-        <!-- ===================================== -->
-        <!-- ACTION -->
-        <!-- ===================================== -->
-
-        <div class="action-buttons">
-          <button id="playBtn" class="btn primary">▶ Play</button>
-
-          <button id="pauseBtn" class="btn secondary">⏸ Pause</button>
-
-          <button id="resetBtn" class="btn secondary">↺ Reset</button>
-        </div>
-
-        <!-- ===================================== -->
-        <!-- PROJECT -->
-        <!-- ===================================== -->
-
-        <div class="action-buttons">
-          <button id="saveProjectBtn" class="btn secondary">
-            💾 Simpan Project
-          </button>
-
-          <button id="loadProjectBtn" class="btn secondary">
-            📂 Buka Project
-          </button>
-        </div>
-
-        <!-- ===================================== -->
-        <!-- EXPORT -->
-        <!-- ===================================== -->
-
-        <div class="action-buttons">
-          <button id="exportPngBtn" class="btn success">📸 Export PNG</button>
-
-          <button id="exportWebmBtn" class="btn danger">🎬 Export WEBM</button>
-        </div>
-      </aside>
-
-      <!-- ================================================= -->
-      <!-- WORKSPACE -->
-      <!-- ================================================= -->
-
-      <main class="workspace">
-        <!-- ===================================== -->
-        <!-- PREVIEW -->
-        <!-- ===================================== -->
-
-        <section class="preview-panel">
-          <div class="preview-stage">
-            <div class="canvas-wrapper">
-              <canvas id="introCanvas" width="1920" height="1080"> </canvas>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro Video Maker Pro - CreatorDigitalPro</title>
+  <meta name="description" content="Intro Video Maker Pro CreatorDigitalPro dengan 5 template premium, upload logo, musik, preview canvas, dan export PNG/WEBM." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-card">
+        <a class="back-link" href="../../index.html">← Back Dashboard</a>
+        <div class="brand-row">
+          <div class="brand-mark">CDP</div>
+          <div>
+            <h1>Intro Studio Pro</h1>
+            <p>5 Premium Video Intro Templates</p>
           </div>
-        </section>
+        </div>
+      </div>
 
-        <!-- ===================================== -->
-        <!-- TIMELINE -->
-        <!-- ===================================== -->
+      <section class="panel">
+        <div class="panel-head">
+          <span>01</span>
+          <h2>Pilih Template</h2>
+        </div>
+        <select id="templateSelect" class="field-select">
+          <option value="creator-classic">Creator Classic</option>
+          <option value="gaming-neon">Gaming Neon</option>
+          <option value="business-elite">Business Elite</option>
+          <option value="breaking-news">Breaking News</option>
+          <option value="islamic-premium">Islamic Premium</option>
+        </select>
+        <div class="template-mini-grid" id="templateCards">
+          <button class="template-mini active" data-template="creator-classic">⭐<span>Creator Classic</span></button>
+          <button class="template-mini" data-template="gaming-neon">🎮<span>Gaming Neon</span></button>
+          <button class="template-mini" data-template="business-elite">💼<span>Business Elite</span></button>
+          <button class="template-mini" data-template="breaking-news">📰<span>Breaking News</span></button>
+          <button class="template-mini" data-template="islamic-premium">🌙<span>Islamic Premium</span></button>
+        </div>
+      </section>
 
-        <section class="timeline-panel">
-          <div class="timeline-header">
-            <h3>Timeline</h3>
+      <section class="panel">
+        <div class="panel-head">
+          <span>02</span>
+          <h2>Konten Intro</h2>
+        </div>
+        <label>Judul / Nama Channel</label>
+        <textarea id="titleInput" rows="3">WELCOME TO MY CHANNEL</textarea>
+        <label>Tagline / Sub Judul</label>
+        <textarea id="subtitleInput" rows="2">CreatorDigitalPro Studio</textarea>
+      </section>
 
-            <span id="timelineLabel"> 0.0s / 10.0s </span>
-          </div>
+      <section class="panel">
+        <div class="panel-head">
+          <span>03</span>
+          <h2>Media</h2>
+        </div>
+        <label>Upload Logo</label>
+        <input type="file" id="logoInput" accept="image/*" />
+        <label>Upload Background</label>
+        <input type="file" id="bgInput" accept="image/*" />
+        <label>Upload Musik</label>
+        <input type="file" id="musicInput" accept="audio/*" />
+      </section>
 
-          <input
-            type="range"
-            id="timelineSlider"
-            min="0"
-            max="10"
-            step="0.1"
-            value="0"
-          />
+      <section class="panel">
+        <div class="panel-head">
+          <span>04</span>
+          <h2>Style</h2>
+        </div>
+        <label>Ukuran Logo <b id="logoSizeLabel">220</b></label>
+        <input type="range" id="logoSize" min="80" max="420" value="220" />
+        <label>Ukuran Judul <b id="titleSizeLabel">110</b></label>
+        <input type="range" id="titleSize" min="52" max="160" value="110" />
+        <label>Ukuran Subtitle <b id="subtitleSizeLabel">42</b></label>
+        <input type="range" id="subtitleSize" min="24" max="72" value="42" />
+        <div class="color-row">
+          <div><label>Warna Judul</label><input type="color" id="titleColor" value="#ffffff" /></div>
+          <div><label>Warna Subtitle</label><input type="color" id="subtitleColor" value="#38bdf8" /></div>
+          <div><label>Warna Tema</label><input type="color" id="accentColor" value="#7c5cff" /></div>
+        </div>
+      </section>
 
-          <div class="timeline-scale">
-            <span>0s</span>
-            <span>2s</span>
-            <span>4s</span>
-            <span>6s</span>
-            <span>8s</span>
-            <span>10s</span>
-          </div>
-        </section>
-      </main>
-    </div>
+      <section class="panel actions-panel">
+        <button id="playBtn" class="btn primary">▶ Play Preview</button>
+        <button id="pauseBtn" class="btn secondary">⏸ Pause</button>
+        <button id="resetBtn" class="btn secondary">↺ Reset</button>
+        <button id="saveProjectBtn" class="btn ghost">💾 Simpan Project</button>
+        <button id="loadProjectBtn" class="btn ghost">📂 Buka Project</button>
+        <button id="exportPngBtn" class="btn success">📸 Export PNG</button>
+        <button id="exportWebmBtn" class="btn danger">🎬 Export WEBM</button>
+      </section>
+    </aside>
 
-    <script src="app.js"></script>
-    <script src="../../assets/js/license-guard.js"></script>
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">CreatorDigitalPro v2.0</p>
+          <h2 id="templateTitle">Creator Classic</h2>
+        </div>
+        <a class="dashboard-btn" href="../../index.html">Back Dashboard</a>
+      </header>
+
+      <section class="preview-area">
+        <div class="canvas-frame">
+          <canvas id="introCanvas" width="1920" height="1080"></canvas>
+        </div>
+      </section>
+
+      <section class="timeline-panel">
+        <div class="timeline-header">
+          <h3>Timeline</h3>
+          <span id="timelineLabel">0.0s / 10.0s</span>
+        </div>
+        <input type="range" id="timelineSlider" min="0" max="10" step="0.1" value="0" />
+        <div class="timeline-scale"><span>0s</span><span>2s</span><span>4s</span><span>6s</span><span>8s</span><span>10s</span></div>
+      </section>
+
+      <section class="template-info-grid">
+        <article><strong>Creator Classic</strong><span>Clean logo reveal untuk channel umum dan edukasi.</span></article>
+        <article><strong>Gaming Neon</strong><span>Glitch, RGB, dan energy untuk gaming/esports.</span></article>
+        <article><strong>Business Elite</strong><span>Luxury gold untuk agency, bisnis, dan UMKM.</span></article>
+        <article><strong>Breaking News</strong><span>TV broadcast style dengan ticker dan alert.</span></article>
+        <article><strong>Islamic Premium</strong><span>Ornamen elegan untuk dakwah dan kajian.</span></article>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+  <script src="../../assets/js/license-guard.js"></script>
 </body>
 </html>
