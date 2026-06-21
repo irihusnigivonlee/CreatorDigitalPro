@@ -1,0 +1,506 @@
+/* =========================================
+CREATORDIGITALPRO
+FULL ELITE TEMPLATE STYLE
+========================================= */
+
+:root{
+--bg:#030712;
+--panel:#0f172a;
+--card:#111827;
+--text:#ffffff;
+--muted:#94a3b8;
+--radius:24px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+width:100%;
+height:100%;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow:hidden;
+}
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#7c5cff;
+border-radius:20px;
+}
+
+.app-wrapper{
+display:flex;
+height:100vh;
+}
+
+.editor-panel{
+width:380px;
+background:rgba(15,23,42,.96);
+backdrop-filter:blur(20px);
+padding:24px;
+overflow-y:auto;
+border-right:1px solid rgba(255,255,255,.08);
+}
+
+.studio-brand{
+padding:20px;
+border-radius:20px;
+margin-bottom:25px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.06);
+}
+
+.studio-brand h2{
+font-size:28px;
+font-weight:900;
+background:linear-gradient(90deg,#7c5cff,#00d4ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.studio-brand span{
+display:block;
+margin-top:8px;
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#94a3b8;
+}
+
+.editor-card{
+padding:25px;
+margin-bottom:20px;
+border-radius:22px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.06);
+}
+
+.form-group{
+padding:18px;
+margin-bottom:18px;
+border-radius:18px;
+background:rgba(255,255,255,.025);
+border:1px solid rgba(255,255,255,.05);
+}
+
+.form-group label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+font-weight:700;
+}
+
+.form-group textarea,
+.form-group input,
+.form-group select{
+width:100%;
+border:none;
+outline:none;
+padding:14px;
+border-radius:16px;
+background:#091325;
+border:1px solid rgba(255,255,255,.08);
+color:white;
+font-size:14px;
+}
+
+.form-group textarea{
+resize:none;
+height:90px;
+}
+
+.action-buttons{
+margin-top:25px;
+}
+
+.btn,
+.action-buttons button{
+width:100%;
+height:58px;
+padding:16px;
+border:none;
+cursor:pointer;
+border-radius:18px;
+font-weight:800;
+font-size:15px;
+margin-top:12px;
+transition:.25s;
+background:linear-gradient(135deg,#7c5cff,#00d4ff);
+color:white;
+}
+
+.btn.secondary{
+background:#101c33;
+color:white;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.btn:hover,
+.action-buttons button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(124,92,255,.35);
+}
+
+.preview-panel{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:auto;
+background:
+radial-gradient(circle at center,rgba(124,92,255,.13),transparent 60%),
+#030712;
+}
+
+.preview-stage{
+display:flex;
+justify-content:center;
+align-items:center;
+min-width:max-content;
+}
+
+.thumbnail{
+position:relative;
+width:1280px;
+height:720px;
+overflow:hidden;
+border-radius:32px;
+background:#000;
+box-shadow:0 45px 95px rgba(0,0,0,.65);
+}
+
+.thumbnail-bg{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+z-index:1;
+}
+
+.brand-tag,
+.thumbnail-title,
+.thumbnail-subtitle,
+.gallery-row,
+.character-frame,
+.main-character,
+.logo-circle{
+position:absolute;
+}
+
+.logo-circle{
+overflow:hidden;
+background:white;
+z-index:25;
+}
+
+.logo-circle img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.character-frame{
+overflow:hidden;
+z-index:15;
+}
+
+.main-character{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.thumbnail > .main-character{
+object-fit:cover;
+}
+
+.gallery-row{
+display:flex;
+z-index:20;
+}
+
+.gallery-item{
+object-fit:cover;
+background:rgba(255,255,255,.08);
+}
+
+.glow{
+position:absolute;
+border-radius:50%;
+filter:blur(80px);
+pointer-events:none;
+}
+
+.export-mode *{
+filter:none !important;
+backdrop-filter:none !important;
+}
+
+@media(max-width:1200px){
+.preview-stage{
+transform:scale(.65);
+transform-origin:center;
+}
+}
+
+@media(max-width:768px){
+body{
+overflow:auto;
+}
+.app-wrapper{
+display:block;
+height:auto;
+}
+.editor-panel{
+width:100%;
+border:none;
+}
+.preview-panel{
+justify-content:flex-start;
+align-items:flex-start;
+padding:10px;
+overflow:auto;
+}
+.preview-stage{
+transform:scale(.30);
+transform-origin:top left;
+}
+}
+
+/* =========================================
+TECH REVIEW ELITE
+Gadget besar tengah, spec panel kiri, gallery vertikal kanan
+========================================= */
+
+.thumbnail{
+background:#050816;
+border-radius:30px;
+border:1px solid rgba(0,229,255,.16);
+}
+
+.thumbnail-bg{
+filter:saturate(1.15) contrast(1.1);
+}
+
+.overlay{
+background:
+linear-gradient(90deg,rgba(5,8,22,.96) 0%,rgba(5,8,22,.72) 36%,rgba(5,8,22,.42) 64%,rgba(5,8,22,.88) 100%),
+radial-gradient(circle at 52% 46%,rgba(0,229,255,.22),transparent 32%),
+radial-gradient(circle at 80% 18%,rgba(124,92,255,.25),transparent 25%);
+}
+
+.thumbnail::before{
+content:"";
+position:absolute;
+left:28px;
+top:28px;
+right:28px;
+bottom:28px;
+border:1px solid rgba(0,229,255,.22);
+border-radius:24px;
+z-index:2;
+}
+
+.thumbnail::after{
+content:"TECH REVIEW";
+position:absolute;
+right:160px;
+top:44px;
+padding:11px 22px;
+border-radius:999px;
+background:rgba(0,229,255,.12);
+border:1px solid rgba(0,229,255,.55);
+color:#00e5ff;
+font-size:20px;
+font-weight:900;
+letter-spacing:2px;
+z-index:25;
+}
+
+.brand-tag{
+left:45px;
+top:38px;
+padding:12px 26px;
+border-radius:14px;
+background:linear-gradient(135deg,#00e5ff,#7c5cff);
+color:#ffffff;
+font-size:23px;
+font-weight:900;
+letter-spacing:.6px;
+z-index:25;
+box-shadow:0 0 24px rgba(0,229,255,.35);
+}
+
+.logo-circle{
+right:45px;
+top:35px;
+width:94px;
+height:94px;
+border-radius:22px;
+border:3px solid #00e5ff;
+box-shadow:0 0 28px rgba(0,229,255,.58);
+}
+
+.character-frame{
+left:50%;
+top:88px;
+width:400px;
+height:510px;
+transform:translateX(-50%);
+border-radius:34px;
+border:3px solid rgba(0,229,255,.72);
+background:rgba(255,255,255,.04);
+box-shadow:
+0 35px 85px rgba(0,0,0,.66),
+0 0 45px rgba(0,229,255,.25),
+inset 0 0 30px rgba(255,255,255,.05);
+}
+
+.thumbnail > .main-character{
+left:50%;
+top:88px;
+width:400px;
+height:510px;
+transform:translateX(-50%);
+border-radius:34px;
+border:3px solid rgba(0,229,255,.72);
+z-index:15;
+box-shadow:
+0 35px 85px rgba(0,0,0,.66),
+0 0 45px rgba(0,229,255,.25);
+}
+
+.thumbnail-title{
+left:55px;
+top:135px;
+width:360px;
+font-size:74px;
+line-height:.94;
+font-weight:900;
+text-transform:uppercase;
+color:#ffffff;
+z-index:20;
+text-shadow:
+0 0 18px rgba(0,229,255,.45),
+0 8px 22px rgba(0,0,0,.65);
+}
+
+.thumbnail-subtitle{
+left:58px;
+top:350px;
+width:340px;
+font-size:27px;
+line-height:1.35;
+font-weight:800;
+color:#00e5ff;
+z-index:20;
+}
+
+.gallery-row{
+right:55px;
+top:165px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.gallery-item{
+width:150px;
+height:96px;
+border-radius:17px;
+border:2px solid rgba(0,229,255,.7);
+box-shadow:
+0 14px 35px rgba(0,0,0,.45),
+0 0 18px rgba(0,229,255,.22);
+}
+
+.spec-card{
+position:absolute;
+left:58px;
+bottom:70px;
+width:345px;
+padding:18px 20px;
+border-radius:22px;
+background:rgba(0,229,255,.08);
+border:1px solid rgba(0,229,255,.35);
+color:#e0faff;
+font-size:22px;
+font-weight:900;
+line-height:1.45;
+z-index:24;
+box-shadow:0 18px 40px rgba(0,0,0,.35);
+}
+
+.spec-card::before{
+content:"SPECS";
+display:inline-block;
+margin-bottom:8px;
+padding:6px 12px;
+border-radius:999px;
+background:#00e5ff;
+color:#020617;
+font-size:14px;
+letter-spacing:1px;
+}
+
+.score-badge{
+position:absolute;
+right:245px;
+bottom:82px;
+width:128px;
+height:128px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#00e5ff,#7c5cff);
+color:white;
+font-size:42px;
+font-weight:900;
+z-index:25;
+box-shadow:0 0 40px rgba(0,229,255,.45);
+}
+
+.score-badge::after{
+content:"SCORE";
+position:absolute;
+bottom:26px;
+font-size:13px;
+letter-spacing:2px;
+}
+
+.glow-1{
+width:450px;
+height:450px;
+background:rgba(0,229,255,.22);
+right:-160px;
+top:-120px;
+}
+
+.glow-2{
+width:390px;
+height:390px;
+background:rgba(124,92,255,.18);
+left:-130px;
+bottom:-130px;
+}

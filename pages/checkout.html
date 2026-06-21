@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - CreatorDigitalPro</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../assets/css/auth.css" />
+</head>
+<body>
+  <div class="stars"></div><div class="stars2"></div><div class="stars3"></div>
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">CreatorDigitalPro</a>
+      <nav class="nav-menu"><a href="../index.html#tools">Tools</a><a href="../index.html#pricing">Harga</a><a href="login.html">Login</a></nav>
+      <div class="nav-actions"><a href="../index.html" class="btn-login">Home</a><a href="pricing.html" class="btn-start">Paket</a></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="checkout-wrap">
+    <section class="container checkout-grid">
+      <div class="checkout-card">
+        <span class="section-badge">Checkout Aman</span>
+        <h1 id="checkoutTitle">CreatorDigitalPro</h1>
+        <p id="checkoutDesc">Isi data pembeli lalu lanjut pembayaran Midtrans.</p>
+        <div class="checkout-price" id="checkoutPrice">Rp0</div>
+        <form id="checkoutForm" class="checkout-form">
+          <input id="buyerName" type="text" placeholder="Nama pembeli" required />
+          <input id="buyerEmail" type="email" placeholder="Email aktif" required />
+          <input id="buyerPhone" type="tel" placeholder="Nomor WhatsApp" />
+          <button type="submit" id="payBtn">Bayar Sekarang</button>
+        </form>
+        <div id="checkoutStatus" class="checkout-status info">Midtrans siap dipakai setelah Client Key dan Server Key diisi.</div>
+        <p class="checkout-note">Setelah pembayaran berhasil, sistem otomatis mengaktifkan akses. Paket ZIP akan membuka tombol download.</p>
+      </div>
+      <div class="checkout-card soft-card">
+        <h2>Yang didapat</h2>
+        <ul id="benefitList"></ul>
+        <div class="secure-box">🔐 Server Key Midtrans disimpan di backend PHP, bukan di JavaScript.</div>
+      </div>
+    </section>
+  </main>
+  <script src="../config/settings.js"></script>
+  <script src="../app.js"></script>
+  <script src="../assets/js/checkout.js"></script>
+</body>
+</html>

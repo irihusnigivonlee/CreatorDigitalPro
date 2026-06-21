@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CreatorDigitalPro - Tutorial Education</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<div class="app-wrapper">
+
+  <aside class="editor-panel">
+
+    <div class="studio-brand">
+      <h2>CreatorDigitalPro</h2>
+      <span>Tutorial Education</span>
+    </div>
+
+    <div class="editor-card">
+      <p>Template edukasi profesional untuk tutorial, kelas online, materi belajar, dan konten pembelajaran.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Judul Thumbnail</label>
+      <textarea id="titleInput">BELAJAR LEBIH MUDAH</textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Sub Judul</label>
+      <textarea id="subtitleInput">Tutorial cepat, jelas, dan mudah dipahami untuk semua kreator.</textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Brand Channel</label>
+      <input type="text" id="brandInput" value="Nama Channel" />
+    </div>
+
+    <div class="form-group">
+      <label>Warna Judul</label>
+      <input type="color" id="titleColor" value="#102033" />
+
+      <label>Ukuran Judul</label>
+      <input type="range" id="titleSize" min="40" max="120" value="66" />
+
+      <label>Stroke Color</label>
+      <input type="color" id="strokeColor" value="#ffffff" />
+
+      <label>Stroke Size</label>
+      <input type="range" id="strokeSize" min="0" max="10" value="0" />
+
+      <label>Shadow</label>
+      <input type="range" id="shadowSize" min="0" max="50" value="0" />
+    </div>
+
+    <div class="form-group">
+      <label>Warna Subtitle</label>
+      <input type="color" id="subtitleColor" value="#166534" />
+
+      <label>Ukuran Subtitle</label>
+      <input type="range" id="subtitleSize" min="18" max="60" value="28" />
+    </div>
+
+    <div class="form-group">
+      <label>Upload Background</label>
+      <input type="file" id="bgInput" accept="image/*" />
+    </div>
+
+    <div class="form-group">
+      <label>Upload Mentor / Foto Utama</label>
+      <input type="file" id="characterInput" accept="image/*" />
+    </div>
+
+    <div class="form-group">
+      <label>Upload Logo</label>
+      <input type="file" id="logoUpload" accept="image/*" />
+    </div>
+
+    <div class="form-group">
+      <label>Gallery 1</label>
+      <input type="file" id="gallery1" accept="image/*" />
+    </div>
+
+    <div class="form-group">
+      <label>Gallery 2</label>
+      <input type="file" id="gallery2" accept="image/*" />
+    </div>
+
+    <div class="form-group">
+      <label>Gallery 3</label>
+      <input type="file" id="gallery3" accept="image/*" />
+    </div>
+
+    <div class="form-group">
+      <label>Gallery 4</label>
+      <input type="file" id="gallery4" accept="image/*" />
+    </div>
+
+    <div class="action-buttons">
+      <button id="saveBtn" class="btn secondary">💾 Simpan Project</button>
+      <button id="loadBtn" class="btn secondary">📂 Buka Project</button>
+      <button id="downloadBtn" class="btn primary">⬇ Download PNG</button>
+      <button id="downloadJpgBtn" class="btn primary">🖼 Download JPG</button>
+    </div>
+
+  </aside>
+
+  <main class="preview-panel">
+    <div class="preview-stage">
+
+      <div id="thumbnail" class="thumbnail">
+
+        <img id="previewBg" class="thumbnail-bg" />
+
+        <div class="overlay"></div>
+
+        <div class="whiteboard"></div>
+
+        <div class="online-badge">ONLINE CLASS</div>
+
+        <div id="brandTag" class="brand-tag">Nama Channel</div>
+
+        <div class="logo-circle">
+          <img id="logoPreview" />
+        </div>
+
+        <div id="previewTitle" class="thumbnail-title">BELAJAR LEBIH MUDAH</div>
+
+        <div id="previewSubtitle" class="thumbnail-subtitle">
+          Tutorial cepat, jelas, dan mudah dipahami untuk semua kreator.
+        </div>
+
+        <div class="lesson-badge">
+          <span>01</span>
+          <small>LESSON</small>
+        </div>
+
+        <div class="note-card">
+          Belajar lebih mudah
+        </div>
+
+        <div class="gallery-title">Materi Pilihan</div>
+
+        <div class="gallery-row">
+          <div class="gallery-card">
+            <img id="previewGallery1" class="gallery-item" />
+            <span>Materi 1</span>
+          </div>
+
+          <div class="gallery-card">
+            <img id="previewGallery2" class="gallery-item" />
+            <span>Materi 2</span>
+          </div>
+
+          <div class="gallery-card">
+            <img id="previewGallery3" class="gallery-item" />
+            <span>Materi 3</span>
+          </div>
+
+          <div class="gallery-card">
+            <img id="previewGallery4" class="gallery-item" />
+            <span>Bonus</span>
+          </div>
+        </div>
+
+        <div class="character-frame">
+          <img id="previewCharacter" class="main-character" />
+        </div>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

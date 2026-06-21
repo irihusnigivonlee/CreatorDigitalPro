@@ -1,0 +1,41 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Composer
+vendor/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Midtrans Keys
+api/secrets.php
+api/keys.php
+
+# Storage
+storage/
+backup/
+
+# Private Files
+private/
+downloads/
+licenses/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Temporary
+tmp/
+temp/
+
+# Cache
+.cache/

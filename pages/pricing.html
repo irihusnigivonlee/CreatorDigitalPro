@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing - CreatorDigitalPro</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="stars"></div><div class="stars2"></div><div class="stars3"></div>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">CreatorDigitalPro</a>
+      <nav class="nav-menu">
+        <a href="../index.html#tools">Tools</a>
+        <a href="../index.html#templates">Templates</a>
+        <a href="#pricing">Harga</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="../tools/thumbnail-maker/index.html" class="btn-start">Mulai Buat</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pricing-premium" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Pilih Cara Pakai</span>
+          <h2>Berlangganan Online atau Download ZIP</h2>
+          <p>Pilih paket yang paling cocok: akses online bulanan atau file ZIP sekali bayar.</p>
+        </div>
+
+        <div class="pricing-duo">
+          <article class="pricing-box monthly-plan">
+            <div class="price-label">Premium Monthly</div>
+            <h3 class="price">Rp9K <span>/bulan</span></h3>
+            <p class="pricing-desc">Akses online semua template dan update bulanan.</p>
+            <ul>
+              <li>Akses semua template online</li>
+              <li>Export PNG/JPG HD</li>
+              <li>Update template bulanan</li>
+              <li>Tanpa install aplikasi</li>
+            </ul>
+            <a href="checkout.html?plan=monthly" class="pricing-btn secondary-price" data-plan="Premium Monthly">Berlangganan</a>
+          </article>
+
+          <article class="pricing-box zip-plan">
+            <div class="popular-badge">🔥 PALING LARIS</div>
+            <div class="price-label">Creator ZIP Elite</div>
+            <h3 class="price">Rp39K <span>sekali bayar</span></h3>
+            <p class="pricing-desc">Download file ZIP, simpan selamanya, dan bisa dipakai offline.</p>
+            <ul>
+              <li>Download file ZIP premium</li>
+              <li>Lifetime use sekali bayar</li>
+              <li>Bisa edit offline</li>
+              <li>Siap hosting pribadi</li>
+            </ul>
+            <a href="checkout.html?plan=zip" class="pricing-btn zip-btn" data-plan="Creator ZIP Elite">Download ZIP</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../config/settings.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>

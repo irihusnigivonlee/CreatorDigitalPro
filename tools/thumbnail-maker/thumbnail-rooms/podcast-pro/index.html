@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CreatorDigitalPro Thumbnail Studio</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+
+  <body>
+    <div class="app-wrapper">
+      <!-- ================================================= -->
+      <!-- SIDEBAR -->
+      <!-- ================================================= -->
+
+      <aside class="editor-panel">
+        <div class="studio-brand">
+          <h2>CreatorDigitalPro</h2>
+
+          <span>Thumbnail Generator Pro</span>
+        </div>
+
+        <div class="editor-card">
+          <div class="editor-badge"></div>
+
+          <p>CreatorDigitalPro Generator Master</p>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- THEME -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Theme Preset</label>
+
+          <select id="themePreset">
+            <option value="ai">AI</option>
+
+            <option value="gaming">Gaming</option>
+
+            <option value="business">Business</option>
+
+            <option value="travel">Travel</option>
+          </select>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- TITLE -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Judul Thumbnail</label>
+
+          <textarea id="titleInput">
+PEKARANGAN YANG SEJUK
+</textarea
+          >
+        </div>
+
+        <!-- ================================================= -->
+        <!-- SUBTITLE -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Sub Judul</label>
+
+          <textarea id="subtitleInput">
+Mencari kenangan yang indah dipantai
+</textarea
+          >
+        </div>
+
+        <!-- ================================================= -->
+        <!-- BRAND CHANNEL -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Brand Channel</label>
+
+          <input type="text" id="brandInput" value="CreatorDigitalPro" />
+        </div>
+
+        <!-- ================================================= -->
+        <!-- TITLE STYLE -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Warna Judul</label>
+
+          <input type="color" id="titleColor" value="#ffffff" />
+
+          <label>Ukuran Judul</label>
+
+          <input type="range" id="titleSize" min="40" max="120" value="78" />
+
+          <label>Stroke Color</label>
+
+          <input type="color" id="strokeColor" value="#000000" />
+
+          <label>Stroke Size</label>
+
+          <input type="range" id="strokeSize" min="0" max="10" value="2" />
+
+          <label>Shadow</label>
+
+          <input type="range" id="shadowSize" min="0" max="50" value="15" />
+        </div>
+
+        <!-- ================================================= -->
+        <!-- SUBTITLE STYLE -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Warna Subtitle</label>
+
+          <input type="color" id="subtitleColor" value="#00d4ff" />
+
+          <label>Ukuran Subtitle</label>
+
+          <input type="range" id="subtitleSize" min="18" max="60" value="28" />
+        </div>
+
+        <!-- ================================================= -->
+        <!-- BACKGROUND -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Upload Background</label>
+
+          <input type="file" id="bgInput" accept="image/*" />
+        </div>
+
+        <!-- ================================================= -->
+        <!-- CHARACTER -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Upload Foto Utama</label>
+
+          <input type="file" id="characterInput" accept="image/*" />
+        </div>
+
+        <!-- ================================================= -->
+        <!-- LOGO -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Upload Logo</label>
+
+          <input type="file" id="logoUpload" accept="image/*" />
+        </div>
+
+        <!-- ================================================= -->
+        <!-- GALLERY -->
+        <!-- ================================================= -->
+
+        <div class="form-group">
+          <label>Gallery 1</label>
+
+          <input type="file" id="gallery1" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <label>Gallery 2</label>
+
+          <input type="file" id="gallery2" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <label>Gallery 3</label>
+
+          <input type="file" id="gallery3" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <label>Gallery 4</label>
+
+          <input type="file" id="gallery4" accept="image/*" />
+        </div>
+
+        <!-- ================================================= -->
+        <!-- ACTION BUTTON -->
+        <!-- ================================================= -->
+
+        <div class="action-buttons">
+          <button id="saveBtn" class="btn secondary">💾 Simpan Project</button>
+
+          <button id="loadBtn" class="btn secondary">📂 Buka Project</button>
+
+          <button id="downloadBtn" class="btn primary">⬇ Download PNG</button>
+
+          <button id="downloadJpgBtn" class="btn primary">
+            🖼 Download JPG
+          </button>
+        </div>
+      </aside>
+
+      <!-- ================================================= -->
+      <!-- PREVIEW -->
+      <!-- ================================================= -->
+
+      <main class="preview-panel">
+        <div class="preview-stage">
+          <div id="thumbnail" class="thumbnail">
+            <img id="previewBg" class="thumbnail-bg" />
+
+            <div class="overlay"></div>
+
+            <div id="brandTag" class="brand-tag">CreatorDigitalPro</div>
+
+            <div id="previewTitle" class="thumbnail-title">
+              PEKARANGAN YANG SEJUK
+            </div>
+
+            <div id="previewSubtitle" class="thumbnail-subtitle">
+              Mencari kenangan yang indah dipantai
+            </div>
+
+            <div class="gallery-row">
+              <img id="previewGallery1" class="gallery-item" />
+
+              <img id="previewGallery2" class="gallery-item" />
+
+              <img id="previewGallery3" class="gallery-item" />
+
+              <img id="previewGallery4" class="gallery-item" />
+            </div>
+
+            <img id="previewCharacter" class="main-character" />
+
+            <div class="logo-circle">
+              <img id="logoPreview" />
+            </div>
+
+            <div class="glow glow-1"></div>
+
+            <div class="glow glow-2"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

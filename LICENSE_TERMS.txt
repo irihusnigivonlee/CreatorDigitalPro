@@ -1,0 +1,10 @@
+CREATORDIGITALPRO LICENSE TERMS
+
+1. Satu pembelian mendapatkan satu license key.
+2. Satu license key hanya boleh digunakan oleh satu pembeli / satu bisnis.
+3. Aktivasi domain hanya berlaku untuk satu domain publik.
+4. Localhost diperbolehkan untuk testing dan development pribadi.
+5. File ZIP tidak boleh dijual ulang, dibagikan gratis, diupload ke marketplace lain, atau diklaim sebagai karya sendiri.
+6. Pembeli boleh menggunakan hasil desain untuk kebutuhan komersial miliknya sendiri.
+7. Update template berlaku sesuai kebijakan penjual.
+8. Pelanggaran lisensi dapat menyebabkan license dinonaktifkan.

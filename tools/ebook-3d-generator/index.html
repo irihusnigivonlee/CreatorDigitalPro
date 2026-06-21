@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Ebook Cover Generator - CreatorDigitalPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="orb orb-c"></div>
+
+  <header class="nav">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark">CDP</span>
+      <span>CreatorDigitalPro</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu">☰</button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="../../index.html">Home</a>
+      <a href="../ebook-builder/index.html">Ebook Builder</a>
+      <a href="../thumbnail-maker/index.html">Thumbnail Maker</a>
+      <a href="#pricing" class="nav-cta">Mulai Buat</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">3D Ebook Cover Generator</div>
+        <h1>Ubah cover ebook biasa jadi mockup 3D yang terlihat mahal.</h1>
+        <p>
+          Upload cover milikmu, pilih bentuk 3D, atur rotasi, lalu download PNG siap dipasang di Link.id, landing page, katalog, dan promosi produk digital.
+        </p>
+        <div class="hero-actions">
+          <a href="#studio" class="btn primary">Coba Generator 3D</a>
+          <a href="#gallery" class="btn ghost">Lihat Gallery</a>
+        </div>
+        <div class="trust-row">
+          <span>⚡ Instant Preview</span>
+          <span>🎨 Premium Mockup</span>
+          <span>⬇ PNG Export</span>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal" id="studio">
+        <div class="stage-top">
+          <span class="live-dot"></span>
+          Live 3D Preview
+        </div>
+        <canvas id="ebookCanvas"></canvas>
+        <div class="studio-panel">
+          <label class="upload-card">
+            <input type="file" id="coverInput" accept="image/*" />
+            <span>Upload Cover Ebook</span>
+            <small>JPG / PNG</small>
+          </label>
+          <div class="control-grid">
+            <label>
+              Model
+              <select id="modelSelect">
+                <option value="standing">Standing Book</option>
+                <option value="box">Box Premium</option>
+                <option value="tablet">Tablet Promo</option>
+                <option value="flat">Flat Display</option>
+              </select>
+            </label>
+            <label>
+              Background
+              <select id="bgSelect">
+                <option value="aurora">Aurora</option>
+                <option value="dark">Dark Glass</option>
+                <option value="gold">Gold Premium</option>
+                <option value="transparent">Transparan</option>
+              </select>
+            </label>
+            <label>
+              Rotate Y
+              <input type="range" id="rotateY" min="-70" max="70" value="-22" />
+            </label>
+            <label>
+              Zoom
+              <input type="range" id="zoomRange" min="55" max="130" value="92" />
+            </label>
+          </div>
+          <div class="studio-actions">
+            <button id="resetBtn" class="btn mini ghost">Reset</button>
+            <button id="downloadBtn" class="btn mini primary">Download PNG</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats reveal">
+      <div><strong>4</strong><span>Model 3D</span></div>
+      <div><strong>HD</strong><span>Export PNG</span></div>
+      <div><strong>1 Klik</strong><span>Upload Cover</span></div>
+      <div><strong>Link.id</strong><span>Siap Promosi</span></div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section-head reveal">
+        <span class="eyebrow">Premium Gallery</span>
+        <h2>Gallery mockup yang bikin ebook terlihat lebih profesional.</h2>
+        <p>Pilih gaya visual sesuai niche produk digitalmu: bisnis, edukasi, islami, marketing, tutorial, dan promosi premium.</p>
+      </div>
+      <div class="gallery-grid">
+        <article class="gallery-card reveal">
+          <div class="mock mock-business"><span>BUSINESS<br>PLAYBOOK</span></div>
+          <h3>Business Elite</h3>
+          <p>Untuk ebook bisnis, kelas online, dan panduan digital berkesan premium.</p>
+        </article>
+        <article class="gallery-card reveal">
+          <div class="mock mock-education"><span>SMART<br>LEARNING</span></div>
+          <h3>Education Pro</h3>
+          <p>Cocok untuk materi edukasi, modul, tutorial, dan panduan belajar.</p>
+        </article>
+        <article class="gallery-card reveal">
+          <div class="mock mock-islamic"><span>ISLAMIC<br>GUIDE</span></div>
+          <h3>Islamic Elegant</h3>
+          <p>Tampilan lembut dan rapi untuk kajian, ebook islami, dan materi dakwah.</p>
+        </article>
+        <article class="gallery-card reveal">
+          <div class="mock mock-marketing"><span>SALES<br>BOOSTER</span></div>
+          <h3>Marketing Booster</h3>
+          <p>Visual tajam untuk promosi, funnel, lead magnet, dan produk digital.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split reveal">
+      <div>
+        <span class="eyebrow">Kenapa Menjual?</span>
+        <h2>Karena pembeli melihat visual dulu sebelum membaca isi ebook.</h2>
+      </div>
+      <div class="benefits">
+        <div><b>01</b><span>Cover terlihat seperti produk digital premium.</span></div>
+        <div><b>02</b><span>Bisa dipakai untuk banner Link.id, landing page, dan katalog.</span></div>
+        <div><b>03</b><span>Tidak perlu desain ulang, cukup upload cover sendiri.</span></div>
+      </div>
+    </section>
+
+    <section class="pricing reveal" id="pricing">
+      <div class="price-card">
+        <span class="badge">CreatorDigitalPro Tools</span>
+        <h2>Buat mockup ebook 3D dalam hitungan menit.</h2>
+        <p>Dapatkan akses 3D Ebook Cover Generator bersama tools CDP lain seperti Thumbnail Maker dan Ebook Builder.</p>
+        <a href="#studio" class="btn primary">Mulai Buat Sekarang</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© CreatorDigitalPro</span>
+    <span>3D Ebook Cover Generator</span>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

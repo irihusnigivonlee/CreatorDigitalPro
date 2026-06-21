@@ -1,0 +1,12 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+</IfModule>
+
+# Lindungi folder private dan storage agar file order/produk tidak bisa dibuka langsung.
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(orders\.json)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>

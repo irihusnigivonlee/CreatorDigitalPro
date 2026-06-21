@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aktivasi License - CreatorDigitalPro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+<body>
+  <div class="stars"></div><div class="stars2"></div><div class="stars3"></div>
+  <main class="checkout-wrap">
+    <section class="container checkout-card success-card">
+      <span class="section-badge">Aktivasi License</span>
+      <h1>Aktifkan CreatorDigitalPro ZIP</h1>
+      <p>Masukkan license key dari pembelian resmi. Domain pertama yang aktif akan dikunci untuk license tersebut. Localhost tetap bisa dipakai untuk testing.</p>
+      <form id="licenseForm" class="checkout-form">
+        <input id="licenseKey" type="text" placeholder="CDP-XXXX-XXXX-XXXX" required />
+        <input id="licenseEmail" type="email" placeholder="Email pembelian" />
+        <button type="submit" id="licenseBtn">Aktifkan Sekarang</button>
+      </form>
+      <div id="licenseStatus" class="checkout-status info">License akan dicek ke server CreatorDigitalPro.</div>
+      <div class="success-actions">
+        <a href="dashboard/index.html" class="btn-primary">Buka Dashboard</a>
+        <a href="index.html" class="btn-secondary">Kembali Home</a>
+      </div>
+    </section>
+  </main>
+  <script src="config/settings.js"></script>
+  <script src="assets/js/license-client.js"></script>
+</body>
+</html>

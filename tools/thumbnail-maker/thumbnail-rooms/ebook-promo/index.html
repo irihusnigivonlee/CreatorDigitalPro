@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CreatorDigitalPro - Ebook Promo Elite</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <div class="app-wrapper">
+
+    <aside class="editor-panel">
+      <div class="studio-brand">
+        <h2>CreatorDigitalPro</h2>
+        <span>Ebook Promo Elite</span>
+      </div>
+
+      <div class="editor-card">
+        <p>Template promo ebook premium untuk marketplace, landing page, iklan, dan konten promosi FBProCreator.</p>
+      </div>
+
+      <div class="form-group">
+        <label>Brand Channel</label>
+        <input type="text" id="brandInput" value="CreatorDigitalPro" />
+      </div>
+
+      <div class="form-group">
+        <label>Judul Ebook</label>
+        <textarea id="titleInput">FB PRO CREATOR GUIDE</textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Sub Judul / Manfaat</label>
+        <textarea id="subtitleInput">Panduan membangun audiens loyal dengan konten berkualitas dan strategi digital modern.</textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Harga Promo</label>
+        <input type="text" id="priceInput" value="Rp79.000" />
+      </div>
+
+      <div class="form-group">
+        <label>Diskon</label>
+        <input type="text" id="discountInput" value="50% OFF" />
+      </div>
+
+      <div class="form-group">
+        <label>CTA Button</label>
+        <input type="text" id="ctaInput" value="Download Sekarang" />
+      </div>
+
+      <div class="form-group">
+        <label>Upload Background</label>
+        <input type="file" id="bgInput" accept="image/*" />
+      </div>
+
+      <div class="form-group">
+        <label>Upload Cover Ebook</label>
+        <input type="file" id="ebookInput" accept="image/*" />
+      </div>
+
+      <div class="form-group">
+        <label>Upload Logo</label>
+        <input type="file" id="logoUpload" accept="image/*" />
+      </div>
+
+      <div class="form-group">
+        <label>Upload Testimoni / Foto User</label>
+        <input type="file" id="testimonialInput" accept="image/*" />
+      </div>
+
+      <div class="form-group">
+        <label>Warna Judul</label>
+        <input type="color" id="titleColor" value="#ffffff" />
+
+        <label>Warna Subtitle</label>
+        <input type="color" id="subtitleColor" value="#fef3c7" />
+
+        <label>Ukuran Judul</label>
+        <input type="range" id="titleSize" min="44" max="100" value="76" />
+
+        <label>Ukuran Subtitle</label>
+        <input type="range" id="subtitleSize" min="18" max="42" value="27" />
+      </div>
+
+      <div class="action-buttons">
+        <button id="saveBtn" class="btn secondary">💾 Simpan Project</button>
+        <button id="loadBtn" class="btn secondary">📂 Buka Project</button>
+        <button id="downloadBtn" class="btn primary">⬇ Download PNG</button>
+        <button id="downloadJpgBtn" class="btn primary">🖼 Download JPG</button>
+      </div>
+    </aside>
+
+    <main class="preview-panel">
+      <div class="preview-stage">
+
+        <div id="thumbnail" class="thumbnail">
+          <img id="previewBg" class="thumbnail-bg" />
+
+          <div class="overlay"></div>
+          <div class="premium-pattern"></div>
+          <div class="gold-frame"></div>
+
+          <div id="brandTag" class="brand-tag">CreatorDigitalPro</div>
+
+          <div class="logo-circle">
+            <img id="logoPreview" />
+          </div>
+
+          <div class="bestseller-ribbon">BESTSELLER</div>
+
+          <div id="previewTitle" class="thumbnail-title">
+            FB PRO CREATOR GUIDE
+          </div>
+
+          <div id="previewSubtitle" class="thumbnail-subtitle">
+            Panduan membangun audiens loyal dengan konten berkualitas dan strategi digital modern.
+          </div>
+
+          <div class="benefit-list">
+            <div class="benefit-item">Materi lengkap & mudah dipahami</div>
+            <div class="benefit-item">Strategi step by step untuk pemula</div>
+            <div class="benefit-item">Cocok untuk creator dan pebisnis digital</div>
+          </div>
+
+          <div class="rating-card">
+            <span>★★★★★</span>
+            <strong>4.9/5</strong>
+            <em>Trusted by creators</em>
+          </div>
+
+          <div class="testimonial-card">
+            <img id="testimonialPreview" />
+            <p>"Materinya praktis, desain promonya keren, dan sangat membantu jualan ebook."</p>
+          </div>
+
+          <div class="ebook-zone">
+            <div class="ebook-shadow"></div>
+
+            <div class="ebook-mockup">
+              <img id="ebookPreview" />
+              <div class="ebook-fallback">
+                <strong>UPLOAD</strong>
+                <span>COVER EBOOK</span>
+              </div>
+            </div>
+
+            <div class="ebook-side"></div>
+          </div>
+
+          <div id="discountBadge" class="discount-badge">50% OFF</div>
+
+          <div class="price-card">
+            <span>Harga Promo</span>
+            <strong id="priceTag">Rp79.000</strong>
+          </div>
+
+          <div id="ctaButton" class="cta-button">Download Sekarang</div>
+
+          <div class="bonus-card">Bonus Template Konten</div>
+
+          <div class="glow glow-1"></div>
+          <div class="glow glow-2"></div>
+          <div class="glow glow-3"></div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

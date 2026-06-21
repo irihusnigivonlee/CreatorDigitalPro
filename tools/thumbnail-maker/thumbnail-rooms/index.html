@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thumbnail Hub</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+
+        background:
+          radial-gradient(circle at top left, #7c4dff22, transparent 30%),
+          radial-gradient(circle at bottom right, #00e5ff22, transparent 30%),
+          #060816;
+
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        width: 100%;
+        padding: 22px 7%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        position: sticky;
+        top: 0;
+        z-index: 999;
+
+        backdrop-filter: blur(16px);
+
+        background: rgba(10, 12, 25, 0.55);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .logo i {
+        color: #7c4dff;
+        font-size: 1.5rem;
+      }
+
+      .back-btn {
+        text-decoration: none;
+
+        color: white;
+
+        padding: 12px 20px;
+
+        border-radius: 14px;
+
+        background: linear-gradient(135deg, #7c4dff, #651fff);
+
+        font-size: 0.95rem;
+        font-weight: 600;
+
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px #7c4dff55;
+      }
+
+      /* HERO */
+
+      .hero {
+        width: 100%;
+        padding: 90px 7% 40px;
+
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+
+        margin-bottom: 20px;
+
+        background: linear-gradient(90deg, #ffffff, #7c4dff, #00e5ff);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        max-width: 760px;
+        margin: auto;
+
+        color: #cfcfe7;
+
+        line-height: 1.8;
+        font-size: 1.05rem;
+      }
+
+      /* GRID */
+
+      .generator-section {
+        padding: 40px 7% 100px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 35px;
+
+        font-weight: 700;
+      }
+
+      .generator-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+        gap: 28px;
+      }
+
+      /* CARD */
+
+      .generator-card {
+        position: relative;
+
+        overflow: hidden;
+
+        text-decoration: none;
+        color: white;
+
+        border-radius: 28px;
+
+        padding: 32px;
+
+        min-height: 240px;
+
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.02)
+        );
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        backdrop-filter: blur(16px);
+
+        transition: 0.35s ease;
+      }
+
+      .generator-card:hover {
+        transform: translateY(-10px) scale(1.02);
+
+        border-color: #7c4dff;
+        box-shadow: 0 25px 50px rgba(124, 77, 255, 0.25);
+      }
+
+      .generator-card::before {
+        content: "";
+
+        position: absolute;
+
+        width: 180px;
+        height: 180px;
+
+        background: #7c4dff22;
+
+        border-radius: 50%;
+
+        top: -70px;
+        right: -70px;
+
+        filter: blur(10px);
+      }
+
+      .card-icon {
+        width: 72px;
+        height: 72px;
+
+        border-radius: 22px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.8rem;
+
+        margin-bottom: 28px;
+
+        background: linear-gradient(135deg, #7c4dff, #00e5ff);
+      }
+
+      .generator-card h3 {
+        font-size: 1.45rem;
+        margin-bottom: 12px;
+      }
+
+      .generator-card p {
+        color: #cfcfe7;
+        line-height: 1.7;
+        font-size: 0.96rem;
+        margin-bottom: 25px;
+      }
+
+      .open-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 0.95rem;
+        font-weight: 600;
+
+        color: #00e5ff;
+      }
+
+      .open-btn i {
+        transition: 0.3s;
+      }
+
+      .generator-card:hover .open-btn i {
+        transform: translateX(6px);
+      }
+
+      /* BADGE */
+
+      .badge {
+        position: absolute;
+
+        top: 24px;
+        right: 24px;
+
+        padding: 8px 14px;
+
+        border-radius: 999px;
+
+        font-size: 0.75rem;
+        font-weight: 600;
+
+        background: #00e67622;
+        color: #00e676;
+
+        border: 1px solid #00e67655;
+      }
+
+      /* FOOTER */
+
+      footer {
+        padding: 35px 7%;
+        text-align: center;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+        color: #a7a7c2;
+        font-size: 0.95rem;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.6rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+<a href="../../../dashboard/index.html" style="position:fixed;left:18px;bottom:18px;z-index:9999;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg,#7c5cff,#00d4ff);color:#fff;text-decoration:none;font-weight:900;font-family:Arial,sans-serif;box-shadow:0 15px 35px rgba(0,0,0,.35);">← Back to Dashboard</a>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        Thumbnail Hub
+      </div>
+
+      <a href="http://127.0.0.1:8500/" class="back-btn"> Back Dashboard </a>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <h1>
+        Create Ultra Clickable <br />
+        Thumbnail Designs
+      </h1>
+
+      <p>
+        Choose your favorite thumbnail generator style. Create gaming
+        thumbnails, neon thumbnails, YouTube thumbnails, podcast covers,
+        cinematic banners and more with elegant AI-powered tools.
+      </p>
+    </section>
+
+    <!-- GENERATOR -->
+
+    <section class="generator-section">
+      <h2 class="section-title">Thumbnail Generators</h2>
+
+      <div class="generator-grid">
+        <!-- CARD 1 -->
+
+        <a href="./creator-classic/" class="generator-card">
+          <div class="badge">Popular</div>
+
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>⭐Creator Classic</h3>
+
+          <p>
+            Pilihan ideal untuk kreator yang menyukai desain klasik dan profesional, membantu meningkatkan klik dan daya tarik penonton.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <!-- CARD 2 -->
+
+        <a href="./podcast-pro/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>🎙Podcast Pro</h3>
+
+          <p>
+            Thumbnail elegan untuk podcast profesional dan modern, membantu membangun citra podcast berkualitas, Pilihan ideal untuk kreator podcast modern.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <!-- CARD 3 -->
+
+        <a href="./breaking-news/" class="generator-card">
+          <div class="badge">New</div>
+
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>📰Breaking News</h3>
+
+          <p>
+            Menampilkan headline secara jelas dan tegas, Layout dinamis seperti siaran televisi modern, Solusi ideal untuk kreator berita online
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <!-- CARD 4 -->
+
+        <a href="./movie-review/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>🎬Movie Review</h3>
+
+          <p>
+            Thumbnail menarik untuk ulasan film dan serial, Desain sinematik dengan nuansa profesional, pilihan tepat bagi pecinta dunia perfilman..
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <!-- CARD 5 -->
+
+        <a href="./tech-review/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>💻Tech Review</h3>
+
+          <p>
+            Cocok untuk gadget, laptop, dan smartphone, Menampilkan produk dengan tampilan profesional, menampilkan kesan inovatif dan profesional.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+        <a href="./tutorial-education/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>📚Tutorial Education</h3>
+
+          <p>
+            Thumbnail edukasi yang jelas dan profesional, Membantu meningkatkan minat belajar penontonn, olusi ideal untuk kreator edukasi.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <a href="./reaction-video/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>🎭Reaction Video</h3>
+
+          <p>
+            Thumbnail ekspresif untuk video reaksi menarik,fokus pada emosi dan momen menarik, cocok untuk konten trending dan viral.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <a href="./product-promo/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>📦Product Promo</h3>
+
+          <p>
+            Desain modern dengan fokus pada produk, cocok untuk pemasaran digital dan bisnis online, desain elegan dan berorientasi penjualan.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+        <a href="./islamic-content/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>🕌Islamic Content</h3>
+
+          <p>
+            Thumbnail islami dengan desain elegan dan tenang, membantu menarik perhatian audiens muslim, solusi ideal untuk kreator konten islami.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+        <a href="./travel-adventure/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>✈Travel Vlog</h3>
+
+          <p>
+            Thumbnail perjalanan dengan nuansa petualangan menarik, Cocok untuk vlog backpacker dan keluarga, solusi ideal untuk kreator travel vlog.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+        
+        <a href="./business-elite/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>💰Business Elite</h3>
+
+          <p>
+            Thumbnail bisnis premium dengan tampilan elegan dan profesional, membantu memperkuat branding personal maupun perusahaan, solusi ideal untuk kreator Business Elite.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+        <a href="./business-elite/" class="generator-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-image"></i>
+          </div>
+
+          <h3>📚ebook-promote</h3>
+
+          <p>
+            Thumbnail profesional untuk promosi ebook digital modern, menampilkan cover ebook dengan tampilan menarik dan desain modern dengan fokus pada nilai ebook.
+          </p>
+
+          <div class="open-btn">
+            Buka Generator
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>© 2026 CREATORDIGITALPRO — Thumbnail Generator Collection</footer>
+  </body>
+</html>

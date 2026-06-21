@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CreatorDigitalPro - Ebook Builder Modern Cyan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body class="template-modern-cyan">
+  <div class="app-shell">
+    <aside class="editor-panel">
+      <div class="brand-box">
+        <div class="brand-mark">CDP</div>
+        <div>
+          <h1>CreatorDigitalPro</h1>
+          <span>Ebook Builder Modern Cyan</span>
+        </div>
+      </div>
+
+      <div class="premium-note">
+        Template modern cyan untuk ebook bisnis, marketing, dan produk digital premium.
+      </div>
+
+      <div class="control-card">
+        <label>Judul Ebook</label>
+        <input id="ebookTitle" type="text" value="Rahasia Konten Digital" />
+
+        <label>Nama Penulis / Brand</label>
+        <input id="authorName" type="text" value="CreatorDigitalPro" />
+
+        <label>Warna Tema</label>
+        <input id="themeColor" type="color" value="#06d6d6" />
+      </div>
+
+      <div class="control-card">
+        <label>Pilih Layout Halaman</label>
+        <select id="layoutSelect">
+          <optgroup label="HALAMAN UTAMA">
+            <option value="cover">Cover Premium</option>
+            <option value="chapter">Chapter Opener / Bab Utama</option>
+          </optgroup>
+          <optgroup label="ANAK HALAMAN">
+            <option value="classic">Content Classic</option>
+            <option value="imageTop">Image Top</option>
+            <option value="imageBottom">Image Bottom</option>
+            <option value="imageSide">Image Side</option>
+            <option value="quote">Quote Highlight</option>
+            <option value="cta">CTA Offer Page</option>
+          </optgroup>
+        </select>
+
+        <label>Judul Halaman</label>
+        <input id="pageTitle" type="text" value="Judul Halaman Premium" />
+
+        <label>Isi Konten</label>
+        <textarea id="pageContent">Tulis materi ebook Anda di sini. Gunakan bahasa yang jelas, ringkas, dan bernilai agar pembaca merasa puas setelah membeli ebook.</textarea>
+
+        <label>Teks CTA / Catatan</label>
+        <input id="pageCta" type="text" value="Mulai praktekkan hari ini" />
+
+        <label>Upload Gambar Halaman</label>
+        <input id="pageImageInput" type="file" accept="image/*" />
+
+        <button id="addPageBtn" class="btn primary" type="button">+ Tambah Halaman</button>
+      </div>
+
+      <div class="control-card">
+        <button id="exportJpgBtn" class="btn gold" type="button">Export ZIP Semua Halaman JPG</button>
+        <button id="printBtn" class="btn secondary" type="button">Print / Save PDF</button>
+        <button id="clearBtn" class="btn danger" type="button">Reset Semua</button>
+      </div>
+
+      <div class="page-list-card">
+        <h3>Daftar Halaman</h3>
+        <div id="pageList" class="page-list"></div>
+      </div>
+    </aside>
+
+    <main class="preview-panel">
+      <header class="topbar">
+        <div>
+          <span>Live Ebook Preview</span>
+          <h2 id="documentTitle">Rahasia Konten Digital</h2>
+        </div>
+        <div class="topbar-actions">
+          <a href="../../../dashboard/index.html">Dashboard</a>
+          <a href="../../thumbnail-maker/index.html">Thumbnail Maker</a>
+        </div>
+      </header>
+
+      <section class="book-stage">
+        <div id="ebookDocument" class="ebook-document"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

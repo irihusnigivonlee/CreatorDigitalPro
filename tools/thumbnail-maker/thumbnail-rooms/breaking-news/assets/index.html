@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FBProCreator - Thumbnail Generator</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- HTML2CANVAS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =====================================================
+         LEFT PANEL
+    ====================================================== -->
+
+      <div class="editor-panel">
+        <div class="panel-title">
+          <h1>🎬 Thumbnail Generator</h1>
+
+          <p>Create cinematic thumbnails instantly</p>
+        </div>
+
+        <!-- TITLE -->
+
+        <div class="form-group">
+          <label> Thumbnail Title </label>
+
+          <textarea id="titleInput" placeholder="INSANE AI TOOLS"></textarea>
+        </div>
+
+        <!-- SUBTITLE -->
+
+        <div class="form-group">
+          <label> Subtitle </label>
+
+          <input
+            type="text"
+            id="subtitleInput"
+            placeholder="Watch Before Deleted"
+          />
+        </div>
+
+        <!-- IMAGE -->
+
+        <div class="form-group">
+          <label> Upload Background </label>
+
+          <input type="file" id="bgInput" accept="image/*" />
+        </div>
+
+        <!-- CHARACTER -->
+
+        <div class="form-group">
+          <label> Upload Character </label>
+
+          <input type="file" id="characterInput" accept="image/*" />
+        </div>
+
+        <!-- TEMPLATE -->
+
+        <div class="form-group">
+          <label> Style Template </label>
+
+          <select id="templateSelect">
+            <option value="mrbeast">MrBeast Style</option>
+
+            <option value="gaming">Gaming Neon</option>
+
+            <option value="anime">Anime Cinematic</option>
+
+            <option value="dark">Dark Cinematic</option>
+          </select>
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+          <button onclick="downloadPNG()">Download PNG</button>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         PREVIEW
+    ====================================================== -->
+
+      <div class="preview-panel">
+        <div class="thumbnail mrbeast-theme" id="thumbnail">
+          <!-- BACKGROUND -->
+
+          <img
+            id="previewBg"
+            class="thumbnail-bg"
+            src="https://dummyimage.com/1280x720/111827/ffffff.png&text=UPLOAD+BACKGROUND"
+          />
+
+          <!-- OVERLAY -->
+
+          <div class="overlay"></div>
+
+          <!-- CHARACTER -->
+
+          <img
+            id="previewCharacter"
+            class="character"
+            src="https://dummyimage.com/500x700/cccccc/000000.png&text=CHARACTER"
+          />
+
+          <!-- TITLE -->
+
+          <div class="thumbnail-title" id="previewTitle">INSANE AI TOOLS</div>
+
+          <!-- SUBTITLE -->
+
+          <div class="thumbnail-subtitle" id="previewSubtitle">
+            WATCH BEFORE DELETED
+          </div>
+
+          <!-- GLOW -->
+
+          <div class="light-glow"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

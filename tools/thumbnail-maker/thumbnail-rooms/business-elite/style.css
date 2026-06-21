@@ -1,0 +1,541 @@
+/* =========================================
+CREATORDIGITALPRO
+BUSINESS ELITE STYLE.CSS
+FULL CLEAN
+========================================= */
+
+:root{
+  --bg:#030712;
+  --panel:#0f172a;
+  --card:#111827;
+  --primary:#7c5cff;
+  --secondary:#00d4ff;
+  --gold:#d4a017;
+  --gold-soft:#f5c542;
+  --text:#ffffff;
+  --muted:#94a3b8;
+  --radius:24px;
+}
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  height:100%;
+}
+
+body{
+  font-family:"Montserrat", Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow:hidden;
+}
+
+/* =========================================
+SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:var(--primary);
+  border-radius:20px;
+}
+
+/* =========================================
+APP
+========================================= */
+
+.app-wrapper{
+  display:flex;
+  height:100vh;
+}
+
+/* =========================================
+EDITOR PANEL
+========================================= */
+
+.editor-panel{
+  width:380px;
+  background:rgba(15,23,42,.95);
+  backdrop-filter:blur(20px);
+  padding:24px;
+  overflow-y:auto;
+  border-right:1px solid rgba(255,255,255,.08);
+}
+
+.studio-brand{
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:25px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.studio-brand h2{
+  font-size:28px;
+  font-weight:900;
+  background:linear-gradient(90deg,#7c5cff,#00d4ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.studio-brand span{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#94a3b8;
+}
+
+.editor-card{
+  padding:25px;
+  margin-bottom:20px;
+  border-radius:22px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.editor-card p{
+  color:#e5e7eb;
+  font-size:14px;
+  font-weight:700;
+}
+
+.form-group{
+  padding:18px;
+  margin-bottom:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(255,255,255,.05);
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:8px;
+  font-size:14px;
+  font-weight:800;
+  color:#ffffff;
+}
+
+.form-group textarea,
+.form-group input,
+.form-group select{
+  width:100%;
+  border:none;
+  outline:none;
+  padding:14px;
+  border-radius:14px;
+  background:#091325;
+  border:1px solid rgba(255,255,255,.08);
+  color:white;
+  font-size:14px;
+}
+
+.form-group textarea{
+  resize:none;
+  height:90px;
+}
+
+.form-group input[type="color"]{
+  height:48px;
+  padding:4px;
+}
+
+.form-group input[type="range"]{
+  padding:0;
+}
+
+.action-buttons{
+  margin-top:25px;
+}
+
+.btn,
+.action-buttons button{
+  width:100%;
+  height:58px;
+  border:none;
+  border-radius:18px;
+  font-size:16px;
+  font-weight:900;
+  cursor:pointer;
+  margin-top:12px;
+  transition:.25s;
+}
+
+.btn.primary,
+.action-buttons button{
+  background:linear-gradient(135deg,#7c5cff,#00d4ff);
+  color:white;
+}
+
+.btn.secondary{
+  background:#101c33;
+  color:white;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.action-buttons button:hover,
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(124,92,255,.35);
+}
+
+/* =========================================
+PREVIEW PANEL
+========================================= */
+
+.preview-panel{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  overflow:auto;
+  background:
+    radial-gradient(circle at center,rgba(124,92,255,.12),transparent 60%),
+    #030712;
+}
+
+.preview-stage{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-width:max-content;
+}
+
+/* =========================================
+BUSINESS ELITE THUMBNAIL
+========================================= */
+
+.thumbnail{
+  position:relative;
+  width:1280px;
+  height:720px;
+  overflow:hidden;
+  border-radius:28px;
+  background:#020617;
+  box-shadow:0 40px 90px rgba(0,0,0,.6);
+}
+
+/* =========================================
+BACKGROUND
+========================================= */
+
+.thumbnail-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+
+.thumbnail-bg:not([src]){
+  display:none;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2,6,23,.96) 0%,
+      rgba(2,6,23,.88) 45%,
+      rgba(2,6,23,.62) 100%
+    );
+  z-index:1;
+}
+
+/* =========================================
+PREMIUM BORDER
+========================================= */
+
+.thumbnail::before{
+  content:"";
+  position:absolute;
+  top:20px;
+  left:20px;
+  right:20px;
+  bottom:20px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:22px;
+  z-index:2;
+  pointer-events:none;
+}
+
+.thumbnail::after{
+  content:"";
+  position:absolute;
+  right:42px;
+  bottom:42px;
+  width:130px;
+  height:95px;
+  border-right:2px solid rgba(212,160,23,.55);
+  border-bottom:2px solid rgba(212,160,23,.55);
+  z-index:3;
+  pointer-events:none;
+}
+
+/* =========================================
+BUSINESS DIVIDER
+========================================= */
+
+.business-line{
+  position:absolute;
+  top:0;
+  left:680px;
+  width:2px;
+  height:100%;
+  background:linear-gradient(transparent,rgba(212,160,23,.38),transparent);
+  z-index:3;
+  pointer-events:none;
+}
+
+/* =========================================
+BRAND
+========================================= */
+
+.brand-tag{
+  position:absolute;
+  left:45px;
+  top:35px;
+  max-width:340px;
+  padding:12px 26px;
+  border-radius:40px;
+  border:2px solid var(--gold);
+  background:rgba(0,0,0,.38);
+  color:var(--gold-soft);
+  font-size:24px;
+  font-weight:900;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  z-index:20;
+}
+
+/* =========================================
+TITLE
+========================================= */
+
+.thumbnail-title{
+  position:absolute;
+  left:60px;
+  top:120px;
+  width:570px;
+  font-size:72px;
+  line-height:1;
+  font-weight:900;
+  text-transform:uppercase;
+  color:#ffffff;
+  z-index:10;
+  text-shadow:0 8px 24px rgba(0,0,0,.65);
+}
+
+/* =========================================
+SUBTITLE
+========================================= */
+
+.thumbnail-subtitle{
+  position:absolute;
+  left:65px;
+  top:330px;
+  width:520px;
+  font-size:26px;
+  line-height:1.45;
+  font-weight:800;
+  color:#22c55e;
+  z-index:10;
+  text-shadow:0 6px 18px rgba(0,0,0,.45);
+}
+
+/* =========================================
+CHARACTER FRAME
+========================================= */
+
+.character-frame{
+  position:absolute;
+  right:70px;
+  top:85px;
+  width:420px;
+  height:500px;
+  border-radius:28px;
+  overflow:hidden;
+  background:rgba(255,255,255,.02);
+  border:4px solid var(--gold);
+  box-shadow:
+    0 0 15px rgba(212,160,23,.50),
+    0 0 40px rgba(212,160,23,.25),
+    0 22px 60px rgba(0,0,0,.60);
+  z-index:10;
+}
+
+.main-character{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.main-character:not([src]){
+  display:none;
+}
+
+/* =========================================
+LOGO
+========================================= */
+
+.logo-circle{
+  position:absolute;
+  right:95px;
+  top:45px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  overflow:hidden;
+  background:white;
+  border:3px solid var(--gold);
+  box-shadow:0 0 20px rgba(212,160,23,.65);
+  z-index:20;
+}
+
+.logo-circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.logo-circle img:not([src]){
+  display:none;
+}
+
+/* =========================================
+GALLERY
+========================================= */
+
+.gallery-row{
+  position:absolute;
+  left:70px;
+  bottom:65px;
+  display:flex;
+  gap:18px;
+  z-index:10;
+}
+
+.gallery-item{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:18px;
+  background:rgba(255,255,255,.05);
+  border:2px solid rgba(255,255,255,.18);
+  box-shadow:0 10px 25px rgba(0,0,0,.45);
+}
+
+.gallery-item:not([src]){
+  background:rgba(255,255,255,.06);
+}
+
+#previewGallery4{
+  display:none;
+}
+
+/* =========================================
+GLOW
+========================================= */
+
+.glow{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  pointer-events:none;
+  z-index:2;
+}
+
+.glow-1{
+  width:350px;
+  height:350px;
+  background:rgba(212,160,23,.14);
+  right:-120px;
+  top:-120px;
+}
+
+.glow-2{
+  width:320px;
+  height:320px;
+  background:rgba(59,130,246,.12);
+  left:-120px;
+  bottom:-120px;
+}
+
+/* =========================================
+EXPORT MODE
+========================================= */
+
+.export-mode{
+  transform:none !important;
+}
+
+.export-mode *{
+  transition:none !important;
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media(max-width:1200px){
+  .thumbnail{
+    transform:scale(.65);
+    transform-origin:center;
+  }
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:768px){
+  body{
+    overflow:auto;
+  }
+
+  .app-wrapper{
+    display:block;
+    height:auto;
+  }
+
+  .editor-panel{
+    width:100%;
+    border:none;
+  }
+
+  .preview-panel{
+    justify-content:flex-start;
+    align-items:flex-start;
+    padding:10px;
+    overflow:auto;
+  }
+
+  .thumbnail{
+    width:1280px;
+    height:720px;
+    transform:scale(.30);
+    transform-origin:top left;
+    margin-bottom:-500px;
+  }
+}

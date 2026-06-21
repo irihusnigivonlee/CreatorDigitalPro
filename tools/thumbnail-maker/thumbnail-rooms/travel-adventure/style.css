@@ -1,0 +1,2070 @@
+/* =========================================
+CREATORDIGITALPRO
+TRAVEL ADVENTURE ELITE PREMIUM
+STYLE.CSS FINAL V1.0
+Premium travel thumbnail template
+Hero destination card + glassmorphism panel + passport stamp + flight path
+World map overlay + rating badge + promo card + itinerary cards + cinematic gallery
+========================================= */
+
+/* =========================================
+ROOT
+========================================= */
+
+:root{
+
+--bg:#03131f;
+
+--panel:#0f172a;
+
+--card:#111827;
+
+--text:#ffffff;
+
+--muted:#cbd5e1;
+
+--cyan:#00d4ff;
+
+--sky:#38bdf8;
+
+--blue:#2563eb;
+
+--green:#22c55e;
+
+--emerald:#10b981;
+
+--yellow:#facc15;
+
+--orange:#f97316;
+
+--sunset:#fb7185;
+
+--cream:#fff7ed;
+
+--dark:#020617;
+
+--glass:rgba(255,255,255,.10);
+
+--glass-border:rgba(255,255,255,.20);
+
+--shadow:0 45px 95px rgba(0,0,0,.65);
+
+--radius:28px;
+
+}
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html,
+body{
+
+width:100%;
+
+height:100%;
+
+}
+
+body{
+
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+
+background:
+var(--bg);
+
+color:
+var(--text);
+
+overflow:hidden;
+
+-webkit-font-smoothing:
+antialiased;
+
+-moz-osx-font-smoothing:
+grayscale;
+
+}
+
+/* =========================================
+SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:
+transparent;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:
+linear-gradient(
+180deg,
+var(--cyan),
+var(--green)
+);
+
+border-radius:999px;
+
+}
+
+/* =========================================
+APP WRAPPER
+========================================= */
+
+.app-wrapper{
+
+display:flex;
+
+height:100vh;
+
+}
+
+/* =========================================
+EDITOR PANEL
+========================================= */
+
+.editor-panel{
+
+width:380px;
+
+background:
+rgba(15,23,42,.96);
+
+backdrop-filter:
+blur(20px);
+
+padding:24px;
+
+overflow-y:auto;
+
+border-right:
+1px solid rgba(0,212,255,.14);
+
+}
+
+.studio-brand{
+
+padding:20px;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+background:
+rgba(255,255,255,.035);
+
+border:
+1px solid rgba(0,212,255,.14);
+
+}
+
+.studio-brand h2{
+
+font-size:28px;
+
+font-weight:900;
+
+background:
+linear-gradient(
+90deg,
+#00d4ff,
+#22c55e,
+#facc15
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.studio-brand span{
+
+display:block;
+
+margin-top:8px;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#bae6fd;
+
+}
+
+.editor-card{
+
+padding:25px;
+
+margin-bottom:20px;
+
+border-radius:22px;
+
+background:
+rgba(255,255,255,.035);
+
+border:
+1px solid rgba(0,212,255,.12);
+
+}
+
+.editor-card p{
+
+font-size:14px;
+
+line-height:1.5;
+
+color:#dbeafe;
+
+}
+
+.form-group{
+
+padding:18px;
+
+margin-bottom:18px;
+
+border-radius:18px;
+
+background:
+rgba(255,255,255,.025);
+
+border:
+1px solid rgba(0,212,255,.10);
+
+}
+
+.form-group label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:14px;
+
+font-weight:800;
+
+color:#ffffff;
+
+}
+
+.form-group textarea,
+.form-group input,
+.form-group select{
+
+width:100%;
+
+border:none;
+
+outline:none;
+
+padding:14px;
+
+border-radius:16px;
+
+background:
+rgba(2,6,23,.88);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+color:white;
+
+font-size:14px;
+
+}
+
+.form-group textarea{
+
+resize:none;
+
+height:90px;
+
+}
+
+.action-buttons{
+
+margin-top:25px;
+
+}
+
+.btn,
+.action-buttons button{
+
+width:100%;
+
+height:58px;
+
+padding:16px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:18px;
+
+font-weight:900;
+
+font-size:15px;
+
+margin-top:12px;
+
+transition:.25s;
+
+background:
+linear-gradient(
+135deg,
+#00d4ff,
+#22c55e
+);
+
+color:white;
+
+}
+
+.btn.secondary{
+
+background:
+rgba(2,6,23,.85);
+
+color:#ffffff;
+
+border:
+1px solid rgba(0,212,255,.18);
+
+}
+
+.btn:hover,
+.action-buttons button:hover{
+
+transform:
+translateY(-3px);
+
+box-shadow:
+0 10px 30px rgba(0,212,255,.26);
+
+}
+
+/* =========================================
+PREVIEW PANEL
+========================================= */
+
+.preview-panel{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+overflow:auto;
+
+background:
+radial-gradient(
+circle at center,
+rgba(0,212,255,.12),
+transparent 58%
+),
+#03131f;
+
+}
+
+.preview-stage{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-width:max-content;
+
+}
+
+/* =========================================
+THUMBNAIL BASE
+========================================= */
+
+.thumbnail{
+
+position:relative;
+
+width:1280px;
+
+height:720px;
+
+overflow:hidden;
+
+border-radius:34px;
+
+background:
+#03131f;
+
+box-shadow:
+var(--shadow),
+0 0 0 1px rgba(255,255,255,.06);
+
+}
+
+/* =========================================
+BACKGROUND IMAGE
+========================================= */
+
+.thumbnail-bg{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:
+saturate(1.12)
+contrast(1.05)
+brightness(.86);
+
+z-index:0;
+
+}
+
+/* =========================================
+MAIN OVERLAY
+========================================= */
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+z-index:1;
+
+background:
+linear-gradient(
+90deg,
+rgba(3,19,31,.94) 0%,
+rgba(3,19,31,.76) 35%,
+rgba(3,19,31,.36) 66%,
+rgba(3,19,31,.72) 100%
+),
+radial-gradient(
+circle at 76% 34%,
+rgba(250,204,21,.20),
+transparent 34%
+),
+radial-gradient(
+circle at 22% 82%,
+rgba(0,212,255,.20),
+transparent 35%
+),
+linear-gradient(
+0deg,
+rgba(2,6,23,.52),
+transparent 48%
+);
+
+}
+
+/* =========================================
+WORLD MAP OVERLAY
+========================================= */
+
+.world-map{
+
+position:absolute;
+
+inset:0;
+
+z-index:2;
+
+opacity:.18;
+
+pointer-events:none;
+
+background-image:
+radial-gradient(circle at 18% 34%,rgba(255,255,255,.42) 0 2px,transparent 3px),
+radial-gradient(circle at 30% 45%,rgba(255,255,255,.38) 0 2px,transparent 3px),
+radial-gradient(circle at 43% 29%,rgba(255,255,255,.40) 0 2px,transparent 3px),
+radial-gradient(circle at 54% 48%,rgba(255,255,255,.35) 0 2px,transparent 3px),
+radial-gradient(circle at 67% 36%,rgba(255,255,255,.38) 0 2px,transparent 3px),
+radial-gradient(circle at 82% 52%,rgba(255,255,255,.44) 0 2px,transparent 3px),
+linear-gradient(35deg,transparent 48%,rgba(255,255,255,.18) 49%,rgba(255,255,255,.18) 50%,transparent 51%),
+linear-gradient(-25deg,transparent 48%,rgba(255,255,255,.14) 49%,rgba(255,255,255,.14) 50%,transparent 51%);
+
+background-size:
+260px 180px,
+260px 180px,
+260px 180px,
+260px 180px,
+260px 180px,
+260px 180px,
+260px 180px,
+260px 180px;
+
+}
+
+/* =========================================
+CINEMATIC FRAME
+========================================= */
+
+.travel-frame{
+
+position:absolute;
+
+inset:24px;
+
+border-radius:28px;
+
+border:
+2px solid rgba(255,255,255,.18);
+
+z-index:5;
+
+pointer-events:none;
+
+box-shadow:
+inset 0 0 22px rgba(255,255,255,.05),
+0 0 28px rgba(0,212,255,.13);
+
+}
+
+.travel-frame::before{
+
+content:"";
+
+position:absolute;
+
+left:20px;
+
+top:20px;
+
+width:110px;
+
+height:110px;
+
+border-left:
+4px solid var(--cyan);
+
+border-top:
+4px solid var(--cyan);
+
+border-radius:
+18px 0 0 0;
+
+box-shadow:
+0 0 18px rgba(0,212,255,.48);
+
+}
+
+.travel-frame::after{
+
+content:"";
+
+position:absolute;
+
+right:20px;
+
+bottom:20px;
+
+width:110px;
+
+height:110px;
+
+border-right:
+4px solid var(--yellow);
+
+border-bottom:
+4px solid var(--yellow);
+
+border-radius:
+0 0 18px 0;
+
+box-shadow:
+0 0 18px rgba(250,204,21,.45);
+
+}
+
+/* =========================================
+BRAND
+========================================= */
+
+.brand-tag{
+
+position:absolute;
+
+left:48px;
+
+top:38px;
+
+padding:
+12px 28px;
+
+border-radius:
+999px;
+
+background:
+rgba(255,255,255,.12);
+
+border:
+1px solid rgba(255,255,255,.22);
+
+color:
+#ffffff;
+
+font-size:
+22px;
+
+font-weight:
+900;
+
+letter-spacing:
+.5px;
+
+z-index:
+30;
+
+backdrop-filter:
+blur(14px);
+
+box-shadow:
+0 14px 35px rgba(0,0,0,.25);
+
+}
+
+/* =========================================
+DESTINATION BADGE
+========================================= */
+
+.destination-badge{
+
+position:absolute;
+
+right:48px;
+
+top:38px;
+
+padding:
+12px 28px;
+
+border-radius:
+999px;
+
+background:
+linear-gradient(
+135deg,
+#facc15,
+#f97316
+);
+
+color:
+#111827;
+
+font-size:
+21px;
+
+font-weight:
+900;
+
+letter-spacing:
+.8px;
+
+z-index:
+30;
+
+box-shadow:
+0 18px 35px rgba(250,204,21,.25);
+
+}
+
+/* =========================================
+LOGO
+========================================= */
+
+.logo-circle{
+
+position:absolute;
+
+left:52px;
+
+bottom:48px;
+
+width:104px;
+
+height:104px;
+
+border-radius:
+50%;
+
+overflow:hidden;
+
+background:
+#ffffff;
+
+border:
+4px solid rgba(0,212,255,.92);
+
+box-shadow:
+0 0 0 8px rgba(0,212,255,.08),
+0 0 30px rgba(0,212,255,.55);
+
+z-index:
+32;
+
+}
+
+.logo-circle img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* =========================================
+HERO DESTINATION CARD / CHARACTER
+========================================= */
+
+.character-frame{
+
+position:absolute;
+
+right:58px;
+
+top:88px;
+
+width:500px;
+
+height:560px;
+
+border-radius:
+42px;
+
+overflow:hidden;
+
+z-index:
+18;
+
+background:
+rgba(255,255,255,.05);
+
+border:
+4px solid rgba(255,255,255,.72);
+
+box-shadow:
+0 38px 90px rgba(0,0,0,.70),
+0 0 48px rgba(0,212,255,.22),
+inset 0 0 28px rgba(255,255,255,.05);
+
+}
+
+.character-frame::before{
+
+content:"";
+
+position:absolute;
+
+inset:14px;
+
+border-radius:
+30px;
+
+border:
+1px solid rgba(255,255,255,.38);
+
+z-index:
+3;
+
+pointer-events:none;
+
+}
+
+.character-frame::after{
+
+content:"DESTINATION VIEW";
+
+position:absolute;
+
+left:50%;
+
+bottom:20px;
+
+transform:
+translateX(-50%);
+
+padding:
+8px 18px;
+
+border-radius:
+999px;
+
+background:
+rgba(3,19,31,.78);
+
+border:
+1px solid rgba(255,255,255,.25);
+
+color:
+#ffffff;
+
+font-size:
+14px;
+
+font-weight:
+900;
+
+letter-spacing:
+2px;
+
+z-index:
+4;
+
+}
+
+.main-character{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* fallback jika HTML lama langsung img */
+.thumbnail > .main-character{
+
+position:absolute;
+
+right:58px;
+
+top:88px;
+
+width:500px;
+
+height:560px;
+
+border-radius:
+42px;
+
+object-fit:cover;
+
+z-index:
+18;
+
+border:
+4px solid rgba(255,255,255,.72);
+
+box-shadow:
+0 38px 90px rgba(0,0,0,.70),
+0 0 48px rgba(0,212,255,.22);
+
+}
+
+/* =========================================
+TITLE
+========================================= */
+
+.thumbnail-title{
+
+position:absolute;
+
+left:62px;
+
+top:130px;
+
+width:610px;
+
+font-size:82px;
+
+line-height:.92;
+
+font-weight:900;
+
+text-transform:uppercase;
+
+color:#ffffff;
+
+z-index:24;
+
+text-shadow:
+0 12px 30px rgba(0,0,0,.68),
+0 0 30px rgba(0,212,255,.20);
+
+}
+
+/* =========================================
+SUBTITLE
+========================================= */
+
+.thumbnail-subtitle{
+
+position:absolute;
+
+left:66px;
+
+top:288px;
+
+width:520px;
+
+font-size:30px;
+
+line-height:1.35;
+
+font-weight:800;
+
+color:#dff9ff;
+
+z-index:24;
+
+text-shadow:
+0 8px 18px rgba(0,0,0,.52);
+
+}
+
+/* =========================================
+GLASSMORPHISM TRAVEL PANEL
+========================================= */
+
+.travel-panel{
+
+position:absolute;
+
+left:62px;
+
+bottom:172px;
+
+width:500px;
+
+padding:
+18px 22px;
+
+border-radius:
+24px;
+
+background:
+rgba(255,255,255,.10);
+
+border:
+1px solid rgba(255,255,255,.18);
+
+backdrop-filter:
+blur(14px);
+
+z-index:
+26;
+
+box-shadow:
+0 18px 42px rgba(0,0,0,.28);
+
+}
+
+.travel-panel h3{
+
+font-size:
+18px;
+
+font-weight:
+900;
+
+letter-spacing:
+1px;
+
+text-transform:
+uppercase;
+
+color:
+#facc15;
+
+margin-bottom:
+10px;
+
+}
+
+.travel-panel p{
+
+font-size:
+22px;
+
+font-weight:
+800;
+
+line-height:
+1.25;
+
+color:
+#ffffff;
+
+}
+
+/* =========================================
+PASSPORT STAMP EFFECT
+========================================= */
+
+.passport-stamp{
+
+position:absolute;
+
+left:505px;
+
+top:92px;
+
+width:158px;
+
+height:158px;
+
+border:
+5px solid rgba(250,204,21,.85);
+
+border-radius:
+50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:
+#facc15;
+
+font-size:
+22px;
+
+font-weight:
+900;
+
+line-height:
+1.05;
+
+letter-spacing:
+1px;
+
+z-index:
+31;
+
+transform:
+rotate(-12deg);
+
+box-shadow:
+0 0 28px rgba(250,204,21,.35);
+
+}
+
+.passport-stamp::before{
+
+content:"";
+
+position:absolute;
+
+inset:12px;
+
+border:
+2px dashed rgba(250,204,21,.72);
+
+border-radius:
+50%;
+
+}
+
+.passport-stamp::after{
+
+content:"TRAVEL";
+
+position:absolute;
+
+bottom:
+30px;
+
+font-size:
+13px;
+
+letter-spacing:
+3px;
+
+}
+
+/* =========================================
+FLIGHT PATH
+========================================= */
+
+.flight-path{
+
+position:absolute;
+
+left:560px;
+
+top:265px;
+
+width:250px;
+
+height:120px;
+
+z-index:
+27;
+
+pointer-events:none;
+
+}
+
+.flight-path::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:50px;
+
+width:220px;
+
+height:80px;
+
+border-top:
+4px dashed rgba(255,255,255,.70);
+
+border-radius:
+50%;
+
+transform:
+rotate(-14deg);
+
+}
+
+.flight-path::after{
+
+content:"✈";
+
+position:absolute;
+
+right:6px;
+
+top:12px;
+
+font-size:
+42px;
+
+color:
+#ffffff;
+
+text-shadow:
+0 0 18px rgba(0,212,255,.70);
+
+transform:
+rotate(18deg);
+
+}
+
+/* =========================================
+RATING BADGE
+========================================= */
+
+.rating-badge{
+
+position:absolute;
+
+right:440px;
+
+bottom:94px;
+
+width:145px;
+
+height:145px;
+
+border-radius:
+50%;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+background:
+linear-gradient(
+135deg,
+#facc15,
+#f97316
+);
+
+color:
+#111827;
+
+font-weight:
+900;
+
+z-index:
+31;
+
+box-shadow:
+0 25px 50px rgba(0,0,0,.36),
+0 0 34px rgba(250,204,21,.36);
+
+}
+
+.rating-badge strong{
+
+font-size:
+42px;
+
+line-height:
+1;
+
+}
+
+.rating-badge span{
+
+font-size:
+20px;
+
+letter-spacing:
+1px;
+
+}
+
+/* =========================================
+PROMO PRICE CARD
+========================================= */
+
+.promo-card{
+
+position:absolute;
+
+right:66px;
+
+bottom:58px;
+
+min-width:
+240px;
+
+height:
+88px;
+
+padding:
+0 28px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+justify-content:center;
+
+border-radius:
+26px;
+
+background:
+linear-gradient(
+135deg,
+#22c55e,
+#10b981
+);
+
+color:
+#ffffff;
+
+font-weight:
+900;
+
+z-index:
+32;
+
+box-shadow:
+0 24px 52px rgba(16,185,129,.30),
+0 0 30px rgba(34,197,94,.34);
+
+}
+
+.promo-card span{
+
+font-size:
+14px;
+
+letter-spacing:
+1.4px;
+
+text-transform:
+uppercase;
+
+opacity:
+.92;
+
+}
+
+.promo-card strong{
+
+font-size:
+34px;
+
+line-height:
+1;
+
+}
+
+/* =========================================
+CINEMATIC GALLERY
+========================================= */
+
+.gallery-row{
+
+position:absolute;
+
+left:180px;
+
+bottom:46px;
+
+display:flex;
+
+gap:14px;
+
+z-index:
+30;
+
+}
+
+.gallery-card{
+
+position:relative;
+
+width:124px;
+
+height:94px;
+
+border-radius:
+18px;
+
+overflow:hidden;
+
+background:
+rgba(255,255,255,.07);
+
+border:
+3px solid rgba(255,255,255,.85);
+
+box-shadow:
+0 16px 34px rgba(0,0,0,.42),
+0 0 20px rgba(0,212,255,.18);
+
+}
+
+.gallery-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+135deg,
+rgba(0,212,255,.16),
+rgba(250,204,21,.10)
+);
+
+z-index:2;
+
+pointer-events:none;
+
+}
+
+.gallery-card::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+height:26px;
+
+background:
+rgba(3,19,31,.82);
+
+z-index:3;
+
+}
+
+.gallery-item{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+z-index:1;
+
+}
+
+.gallery-card span{
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+height:26px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:
+#ffffff;
+
+font-size:
+12px;
+
+font-weight:
+900;
+
+z-index:
+4;
+
+}
+
+/* fallback untuk HTML lama tanpa gallery-card */
+.gallery-row > .gallery-item{
+
+position:relative;
+
+width:124px;
+
+height:94px;
+
+border-radius:
+18px;
+
+border:
+3px solid rgba(255,255,255,.85);
+
+box-shadow:
+0 16px 34px rgba(0,0,0,.42),
+0 0 20px rgba(0,212,255,.18);
+
+}
+
+/* =========================================
+ITINERARY CARDS
+========================================= */
+
+.itinerary-stack{
+
+position:absolute;
+
+left:565px;
+
+bottom:230px;
+
+width:230px;
+
+height:130px;
+
+z-index:
+29;
+
+}
+
+.itinerary-card{
+
+position:absolute;
+
+left:0;
+
+width:220px;
+
+height:58px;
+
+padding:
+0 16px;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+border-radius:
+18px;
+
+background:
+rgba(255,255,255,.12);
+
+border:
+1px solid rgba(255,255,255,.18);
+
+color:
+#ffffff;
+
+font-size:
+17px;
+
+font-weight:
+900;
+
+backdrop-filter:
+blur(12px);
+
+box-shadow:
+0 16px 35px rgba(0,0,0,.28);
+
+
+
+}
+
+.itinerary-card:nth-child(1){
+
+top:0;
+
+}
+
+.itinerary-card:nth-child(2){
+
+top:70px;
+
+left:22px;
+
+}
+
+.itinerary-card::before{
+
+width:34px;
+
+height:34px;
+
+border-radius:
+50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:
+#facc15;
+
+color:
+#111827;
+
+font-size:
+17px;
+
+font-weight:
+900;
+
+}
+
+.itinerary-card:nth-child(1)::before{
+
+content:"1";
+
+}
+
+.itinerary-card:nth-child(2)::before{
+
+content:"2";
+
+}
+
+/* =========================================
+ADVENTURE COUNTER
+========================================= */
+
+.adventure-counter{
+
+position:absolute;
+
+left:62px;
+
+top:520px;
+
+display:flex;
+
+gap:14px;
+
+z-index:28;
+
+}
+
+.counter-item{
+
+min-width:
+110px;
+
+height:
+70px;
+
+padding:
+8px 14px;
+
+border-radius:
+20px;
+
+background:
+rgba(255,255,255,.10);
+
+border:
+1px solid rgba(255,255,255,.18);
+
+backdrop-filter:
+blur(12px);
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+box-shadow:
+0 14px 32px rgba(0,0,0,.25);
+
+}
+
+.counter-item strong{
+
+font-size:
+28px;
+
+line-height:
+1;
+
+color:
+#facc15;
+
+font-weight:
+900;
+
+}
+
+.counter-item span{
+
+font-size:
+12px;
+
+font-weight:
+900;
+
+letter-spacing:
+1px;
+
+text-transform:
+uppercase;
+
+color:
+#ffffff;
+
+margin-top:
+4px;
+
+}
+
+/* =========================================
+TROPICAL LEAF DECOR
+========================================= */
+
+.tropical-leaf{
+
+position:absolute;
+
+right:500px;
+
+top:44px;
+
+width:130px;
+
+height:180px;
+
+z-index:
+6;
+
+opacity:.55;
+
+pointer-events:
+none;
+
+}
+
+.tropical-leaf::before,
+.tropical-leaf::after{
+
+content:"";
+
+position:absolute;
+
+width:70px;
+
+height:130px;
+
+border-radius:
+70px 0 70px 0;
+
+background:
+linear-gradient(
+135deg,
+rgba(34,197,94,.65),
+rgba(16,185,129,.15)
+);
+
+transform:
+rotate(28deg);
+
+}
+
+.tropical-leaf::after{
+
+left:54px;
+
+top:28px;
+
+transform:
+rotate(-35deg);
+
+background:
+linear-gradient(
+135deg,
+rgba(250,204,21,.48),
+rgba(34,197,94,.13)
+);
+
+}
+
+/* =========================================
+SUNSET GLOW DISC
+========================================= */
+
+.sunset-disc{
+
+position:absolute;
+
+right:405px;
+
+top:195px;
+
+width:170px;
+
+height:170px;
+
+border-radius:
+50%;
+
+background:
+linear-gradient(
+135deg,
+rgba(250,204,21,.72),
+rgba(251,113,133,.35)
+);
+
+z-index:
+3;
+
+filter:
+blur(1px);
+
+box-shadow:
+0 0 70px rgba(250,204,21,.35);
+
+}
+
+/* =========================================
+DRONE VIEW FRAME LABEL
+========================================= */
+
+.drone-label{
+
+position:absolute;
+
+right:118px;
+
+top:120px;
+
+padding:
+10px 18px;
+
+border-radius:
+999px;
+
+background:
+rgba(3,19,31,.78);
+
+border:
+1px solid rgba(255,255,255,.20);
+
+color:
+#ffffff;
+
+font-size:
+14px;
+
+font-weight:
+900;
+
+letter-spacing:
+1.5px;
+
+z-index:
+34;
+
+backdrop-filter:
+blur(10px);
+
+}
+
+.drone-label::before{
+
+content:"●";
+
+color:
+#22c55e;
+
+margin-right:
+8px;
+
+}
+
+/* =========================================
+GLOWS
+========================================= */
+
+.glow{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:
+blur(85px);
+
+pointer-events:none;
+
+}
+
+.glow-1{
+
+width:470px;
+
+height:470px;
+
+background:
+rgba(0,212,255,.20);
+
+right:-145px;
+
+top:-130px;
+
+z-index:2;
+
+}
+
+.glow-2{
+
+width:420px;
+
+height:420px;
+
+background:
+rgba(34,197,94,.16);
+
+left:-135px;
+
+bottom:-130px;
+
+z-index:2;
+
+}
+
+.glow-3{
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+right:390px;
+
+top:195px;
+
+border-radius:50%;
+
+background:
+rgba(250,204,21,.14);
+
+filter:
+blur(85px);
+
+z-index:2;
+
+pointer-events:none;
+
+}
+
+/* =========================================
+EXPORT MODE
+========================================= */
+
+.export-mode .passport-stamp,
+.export-mode .trending-sticker{
+
+transform:none !important;
+
+}
+
+.export-mode .gallery-card,
+.export-mode .rating-badge,
+.export-mode .promo-card,
+.export-mode .travel-panel,
+.export-mode .itinerary-card,
+.export-mode .counter-item{
+
+box-shadow:none !important;
+
+}
+
+.export-mode .glow,
+.export-mode .glow-3{
+
+display:none !important;
+
+}
+
+.export-mode *{
+
+filter:none !important;
+
+backdrop-filter:none !important;
+
+}
+
+/* =========================================
+RESPONSIVE TABLET
+========================================= */
+
+@media(max-width:1200px){
+
+.preview-stage{
+
+transform:
+scale(.65);
+
+transform-origin:
+center;
+
+}
+
+}
+
+/* =========================================
+RESPONSIVE MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+body{
+
+overflow:auto;
+
+}
+
+.app-wrapper{
+
+display:block;
+
+height:auto;
+
+}
+
+.editor-panel{
+
+width:100%;
+
+border:none;
+
+}
+
+.preview-panel{
+
+justify-content:flex-start;
+
+align-items:flex-start;
+
+padding:10px;
+
+overflow:auto;
+
+}
+
+.preview-stage{
+
+transform:
+scale(.30);
+
+transform-origin:
+top left;
+
+}
+
+}
+
+/* =========================================
+END
+========================================= */

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Dashboard - CreatorDigitalPro</title>
+  <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  <style>
+    .dashboard-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:linear-gradient(135deg,rgba(139,92,246,.22),rgba(56,189,248,.16));border:1px solid rgba(139,92,246,.45);color:#e9d5ff;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+    .template-card.featured{position:relative;overflow:hidden;border:1px solid rgba(139,92,246,.65)!important;background:linear-gradient(135deg,rgba(139,92,246,.24),rgba(56,189,248,.14))!important;box-shadow:0 24px 70px rgba(139,92,246,.24)!important}
+    .template-card.featured:before{content:"NEW";position:absolute;top:14px;right:14px;padding:6px 10px;border-radius:999px;background:linear-gradient(135deg,#f59e0b,#f97316);color:#111827;font-size:11px;font-weight:900;letter-spacing:.08em}
+    .template-card.featured span{filter:drop-shadow(0 10px 28px rgba(56,189,248,.35))}
+    .template-card small{display:block;margin-top:10px;color:rgba(255,255,255,.68);font-size:12px;line-height:1.5}
+    .quick-flow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .quick-flow b{font-size:11px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.82)}
+    @media(max-width:760px){.topbar{gap:18px}.template-card.featured:before{top:10px;right:10px}.quick-flow b{font-size:10px}}
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <a href="../index.html" class="brand">CDP</a>
+      <nav>
+        <a href="#" class="active">🏠 Dashboard</a>
+        <a href="../tools/thumbnail-maker/index.html">🖼 Thumbnail Maker</a>
+        <a href="../tools/intro-video-maker/index.html">🎬 Intro Video Maker</a>
+        <a href="../tools/ebook-builder/index.html">📖 Ebook Builder</a>
+        <a href="../tools/ebook-3d-generator/index.html">📦 3D Ebook Generator</a>
+        <a href="../tools/templates-ebook/index.html">📚 Ebook Templates</a>
+        <a href="../pages/pricing.html">💳 Pricing</a>
+        <a href="../index.html">🌐 Home</a>
+      </nav>
+      <div class="upgrade-box">
+        <h4>CreatorDigitalPro</h4>
+        <p id="memberPlan">Free User</p>
+        <a href="../pages/pricing.html">Upgrade</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <div class="dashboard-badge">Creator Digital Suite</div>
+          <h1 id="welcomeTitle">Welcome Creator</h1>
+          <p>Kelola template, tools, project, dan aset promosi digital premium.</p>
+        </div>
+        <button id="logoutBtn">Logout</button>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card"><strong>12+</strong><span>Template</span></div>
+        <div class="stat-card"><strong>HD</strong><span>PNG/JPG Export</span></div>
+        <div class="stat-card"><strong>3D</strong><span>Ebook Mockup</span></div>
+        <div class="stat-card"><strong>39K</strong><span>ZIP Lifetime</span></div>
+      </section>
+
+      <section class="template-section">
+        <h2>Mulai Membuat</h2>
+        <div class="template-grid">
+          <a class="template-card" href="../tools/thumbnail-maker/index.html">
+            <span>🖼</span>
+            <h3>Thumbnail Maker</h3>
+            <p>Buat thumbnail YouTube premium dan export PNG/JPG HD.</p>
+          </a>
+
+          <a class="template-card" href="../tools/intro-video-maker/index.html">
+            <span>🎬</span>
+            <h3>Intro Video Maker</h3>
+            <p>Buat intro video promosi untuk brand dan konten digital.</p>
+          </a>
+
+          <a class="template-card featured" href="../tools/ebook-3d-generator/index.html">
+            <span>📦</span>
+            <h3>3D Ebook Generator</h3>
+            <p>Buat cover ebook 3D profesional untuk Link.id, marketplace, dan landing page.</p>
+            <div class="quick-flow">
+              <b>Upload Cover</b>
+              <b>Preview 3D</b>
+              <b>Download PNG</b>
+            </div>
+          </a>
+
+          <a class="template-card" href="../tools/ebook-builder/index.html">
+            <span>📖</span>
+            <h3>Ebook Builder</h3>
+            <p>Buat ebook visual dan export ZIP berisi halaman JPG.</p>
+          </a>
+
+          <a class="template-card" href="../tools/thumbnail-maker/thumbnail-rooms/ebook-promo/index.html">
+            <span>📘</span>
+            <h3>Ebook Promo</h3>
+            <p>Template promosi ebook siap jual untuk konten digital.</p>
+          </a>
+
+          <a class="template-card" href="../tools/thumbnail-maker/thumbnail-rooms/business-elite/index.html">
+            <span>💼</span>
+            <h3>Business Elite</h3>
+            <p>Template bisnis elegan untuk branding dan promosi profesional.</p>
+          </a>
+
+          <a class="template-card" href="../tools/templates-ebook/index.html">
+            <span>📚</span>
+            <h3>Ebook Templates</h3>
+            <p>Kumpulan template ebook untuk edukasi, bisnis, islamic, dan marketing.</p>
+          </a>
+
+          <a class="template-card" href="../api/download.php">
+            <span>⬇️</span>
+            <h3>Download ZIP</h3>
+            <p>Khusus pembeli paket ZIP dengan license key aktif.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../config/settings.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/license-guard.js"></script>
+</body>
+</html>
