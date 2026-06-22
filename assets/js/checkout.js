@@ -6,22 +6,22 @@
   const settings = window.CDP_SETTINGS || {};
   const plans = {
     starter: {
-      name: "Starter 9K",
+      name: "Starter Promo 9K",
       price: settings.starterPrice || 9000,
-      desc: "Paket hemat untuk mulai memakai CreatorDigitalPro selama 30 hari.",
-      benefits: ["Thumbnail Maker Starter", "1 Template eBook", "1 Template Intro Video", "Export HD dasar", "Update fitur ringan"]
+      desc: "Paket murah promo untuk pelanggan baru yang ingin memakai semua fitur utama CreatorDigitalPro selama 30 hari.",
+      benefits: ["Full Thumbnail Maker", "Full Template eBook", "Full Template Intro Video", "Export HD dasar", "Update fitur ringan"]
     },
     pro: {
       name: "Creator Pro 49K",
       price: settings.proPrice || 49000,
-      desc: "Paket paling populer untuk kreator aktif dengan export tanpa watermark.",
-      benefits: ["Semua Thumbnail Template", "Semua eBook Template", "Semua Intro Video Template", "Export tanpa watermark", "Update template bulanan"]
+      desc: "Paket populer untuk kreator aktif dengan fitur AI, Shorts Builder, dan export tanpa watermark.",
+      benefits: ["Semua fitur Starter Promo", "Export tanpa watermark", "AI Title Generator", "AI Description & Tag Generator", "Shorts Builder"]
     },
     premium: {
       name: "Premium 99K",
       price: settings.premiumPrice || 99000,
-      desc: "Paket premium untuk kreator serius dengan fitur AI dan prioritas support.",
-      benefits: ["Semua fitur Creator Pro", "AI Title Generator", "AI Description Generator", "AI Tag Generator", "Priority Support"]
+      desc: "Paket premium untuk kreator serius dengan AI Analyzer, Cloud Save, Unlimited Project, dan prioritas support.",
+      benefits: ["Semua fitur Creator Pro", "AI Thumbnail Analyzer", "Cloud Save Project", "Unlimited Project", "Priority Support"]
     }
   };
 

@@ -14,7 +14,7 @@ $phone = trim($buyer['phone'] ?? '');
 if(!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) cdp_json(['ok'=>false,'message'=>'Email aktif wajib diisi'],422);
 
 $plans = [
-  'starter' => ['name'=>'Starter 9K','price'=>CDP_STARTER_PRICE,'duration_days'=>30],
+  'starter' => ['name'=>'Starter Promo 9K','price'=>CDP_STARTER_PRICE,'duration_days'=>30],
   'pro' => ['name'=>'Creator Pro 49K','price'=>CDP_PRO_PRICE,'duration_days'=>30],
   'premium' => ['name'=>'Premium 99K','price'=>CDP_PREMIUM_PRICE,'duration_days'=>30]
 ];

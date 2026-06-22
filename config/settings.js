@@ -24,7 +24,7 @@ window.CDP_SETTINGS = {
   plans: {
     free: "Free User",
     demo: "Gratis Demo",
-    starter: "Starter 9K",
+    starter: "Starter Promo 9K",
     pro: "Creator Pro 49K",
     premium: "Premium 99K"
   }
