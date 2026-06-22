@@ -6,7 +6,7 @@ $input = json_decode($raw, true);
 if(!is_array($input)) cdp_json(['ok'=>false,'message'=>'Payload tidak valid'],400);
 if(!cdp_is_configured()) cdp_json(['ok'=>false,'message'=>'Midtrans belum aktif. Isi MIDTRANS_SERVER_KEY dan MIDTRANS_CLIENT_KEY di api/config.php atau ENV hosting.'],500);
 
-$plan = $input['plan'] ?? 'monthly';
+$plan = $input['plan'] ?? 'starter';
 $buyer = $input['buyer'] ?? [];
 $name = trim($buyer['name'] ?? 'Creator');
 $email = trim($buyer['email'] ?? '');
@@ -14,8 +14,9 @@ $phone = trim($buyer['phone'] ?? '');
 if(!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) cdp_json(['ok'=>false,'message'=>'Email aktif wajib diisi'],422);
 
 $plans = [
-  'monthly' => ['name'=>'Premium Monthly','price'=>CDP_MONTHLY_PRICE,'duration_days'=>30],
-  'zip' => ['name'=>'Creator ZIP Elite','price'=>CDP_ZIP_PRICE,'duration_days'=>36500]
+  'starter' => ['name'=>'Starter 9K','price'=>CDP_STARTER_PRICE,'duration_days'=>30],
+  'pro' => ['name'=>'Creator Pro 49K','price'=>CDP_PRO_PRICE,'duration_days'=>30],
+  'premium' => ['name'=>'Premium 99K','price'=>CDP_PREMIUM_PRICE,'duration_days'=>30]
 ];
 if(!isset($plans[$plan])) cdp_json(['ok'=>false,'message'=>'Paket tidak ditemukan'],404);
 $item = $plans[$plan];

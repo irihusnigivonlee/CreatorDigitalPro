@@ -20,8 +20,9 @@ if(!defined('CDP_MIDTRANS_IS_PRODUCTION')) define('CDP_MIDTRANS_IS_PRODUCTION', 
 
 // Harga dan produk
 if(!defined('CDP_STORE_NAME')) define('CDP_STORE_NAME', 'CreatorDigitalPro');
-if(!defined('CDP_MONTHLY_PRICE')) define('CDP_MONTHLY_PRICE', 9000);
-if(!defined('CDP_ZIP_PRICE')) define('CDP_ZIP_PRICE', 39000);
+if(!defined('CDP_STARTER_PRICE')) define('CDP_STARTER_PRICE', 9000);
+if(!defined('CDP_PRO_PRICE')) define('CDP_PRO_PRICE', 49000);
+if(!defined('CDP_PREMIUM_PRICE')) define('CDP_PREMIUM_PRICE', 99000);
 
 // File storage. Untuk shared hosting, folder ini wajib writable.
 if(!defined('CDP_ORDERS_FILE')) define('CDP_ORDERS_FILE', __DIR__ . '/../storage/orders.json');

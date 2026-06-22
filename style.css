@@ -1,7 +1,7 @@
 /* =========================================
    CREATORDIGITALPRO
    ULTRA ELEGANT SALES UI
-   WITH 9K MONTHLY + 39K ZIP PRICING
+   WITH DEMO + STARTER 9K + PRO 49K + PREMIUM 99K PRICING
 ========================================= */
 
 :root{
@@ -729,11 +729,16 @@ footer{
   padding:150px 0;
 }
 
-.pricing-duo{
+.pricing-duo,
+.pricing-grid{
   display:grid;
-  grid-template-columns:1fr 1.05fr;
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:28px;
   align-items:stretch;
+}
+
+.pricing-grid-4{
+  grid-template-columns:repeat(4,minmax(0,1fr));
 }
 
 .pricing-box{
@@ -759,6 +764,7 @@ footer{
   background:radial-gradient(circle,rgba(124,92,255,.30),transparent 65%);
 }
 
+.pro-plan,
 .zip-plan{
   transform:scale(1.03);
   border-color:rgba(250,204,21,.45);
@@ -770,6 +776,7 @@ footer{
     0 0 55px rgba(250,204,21,.16);
 }
 
+.pro-plan::before,
 .zip-plan::before{
   background:radial-gradient(circle,rgba(250,204,21,.36),transparent 65%);
 }
@@ -863,11 +870,28 @@ footer{
   border:1px solid rgba(255,255,255,.16);
 }
 
-.zip-btn{
+.zip-btn,
+.pro-btn{
   color:#111827;
   background:linear-gradient(135deg,var(--gold),var(--gold-soft));
   box-shadow:0 24px 55px rgba(250,204,21,.26);
 }
+
+.premium-plan{
+  border-color:rgba(56,189,248,.38);
+  background:
+    radial-gradient(circle at 88% 8%,rgba(56,189,248,.18),transparent 30%),
+    linear-gradient(180deg,rgba(56,189,248,.10),rgba(255,255,255,.045));
+}
+
+.premium-btn{
+  color:white;
+  background:linear-gradient(135deg,#38bdf8,#7c5cff);
+  box-shadow:0 24px 55px rgba(56,189,248,.22);
+}
+
+.demo-plan .price-label{color:#cbd5e1;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)}
+.starter-plan .price-label{color:#a7f3d0;background:rgba(16,185,129,.10);border-color:rgba(16,185,129,.18)}
 
 .zip-showcase{
   margin-top:40px;
@@ -1076,11 +1100,14 @@ footer p{
     gap:10px;
   }
 
-  .pricing-duo{
+  .pricing-duo,
+  .pricing-grid,
+  .pricing-grid-4{
     grid-template-columns:1fr;
   }
 
-  .zip-plan{
+  .pro-plan,
+.zip-plan{
     transform:none;
   }
 }
@@ -1664,3 +1691,13 @@ body.nav-open .menu-toggle span:nth-child(3){
     transform:translateX(6px);
 }
  
+
+@media (max-width: 1180px){
+  .pricing-grid-4{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .pro-plan{transform:none;}
+}
+
+@media (max-width: 760px){
+  .pricing-grid-4{grid-template-columns:1fr;}
+  .pricing-box{padding:32px 24px;}
+}

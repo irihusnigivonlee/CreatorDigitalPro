@@ -1,20 +1,27 @@
 /* CreatorDigitalPro Midtrans Checkout - Hosting Ready */
 (function(){
   const params = new URLSearchParams(location.search);
-  const planKey = params.get("plan") === "zip" ? "zip" : "monthly";
+  const requestedPlan = params.get("plan") || "starter";
+  const planKey = ["starter", "pro", "premium"].includes(requestedPlan) ? requestedPlan : "starter";
   const settings = window.CDP_SETTINGS || {};
   const plans = {
-    monthly: {
-      name: "Premium Monthly",
-      price: settings.monthlyPrice || 9000,
-      desc: "Akses online semua tools CreatorDigitalPro selama 30 hari.",
-      benefits: ["Akses dashboard premium", "Thumbnail Maker", "Intro Video Maker", "Ebook Builder", "Update template online"]
+    starter: {
+      name: "Starter 9K",
+      price: settings.starterPrice || 9000,
+      desc: "Paket hemat untuk mulai memakai CreatorDigitalPro selama 30 hari.",
+      benefits: ["Thumbnail Maker Starter", "1 Template eBook", "1 Template Intro Video", "Export HD dasar", "Update fitur ringan"]
     },
-    zip: {
-      name: "Creator ZIP Elite",
-      price: settings.zipPrice || 39000,
-      desc: "Download file ZIP CreatorDigitalPro sekali bayar.",
-      benefits: ["Download ZIP otomatis", "Lifetime use", "Siap upload ke hosting", "File HTML/CSS/JS lengkap", "License key pembeli"]
+    pro: {
+      name: "Creator Pro 49K",
+      price: settings.proPrice || 49000,
+      desc: "Paket paling populer untuk kreator aktif dengan export tanpa watermark.",
+      benefits: ["Semua Thumbnail Template", "Semua eBook Template", "Semua Intro Video Template", "Export tanpa watermark", "Update template bulanan"]
+    },
+    premium: {
+      name: "Premium 99K",
+      price: settings.premiumPrice || 99000,
+      desc: "Paket premium untuk kreator serius dengan fitur AI dan prioritas support.",
+      benefits: ["Semua fitur Creator Pro", "AI Title Generator", "AI Description Generator", "AI Tag Generator", "Priority Support"]
     }
   };
 

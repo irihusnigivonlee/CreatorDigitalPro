@@ -18,7 +18,7 @@ if($isPaid){
   $orders[$order_id]['paid'] = true;
   $orders[$order_id]['paid_at'] = date('c');
   if(empty($orders[$order_id]['license_key'])) $orders[$order_id]['license_key'] = cdp_license_key($orders[$order_id]['email']);
-  if($orders[$order_id]['plan'] === 'monthly') $orders[$order_id]['expires_at'] = date('c', strtotime('+30 days'));
+  $orders[$order_id]['expires_at'] = date('c', strtotime('+30 days'));
 }else{
   $orders[$order_id]['status'] = $transaction_status ?: 'pending';
 }

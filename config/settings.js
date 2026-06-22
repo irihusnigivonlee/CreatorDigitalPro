@@ -6,8 +6,9 @@
 window.CDP_SETTINGS = {
   appName: "CreatorDigitalPro",
   currency: "IDR",
-  monthlyPrice: 9000,
-  zipPrice: 39000,
+  starterPrice: 9000,
+  proPrice: 49000,
+  premiumPrice: 99000,
   rootPath: "./",
   dashboardUrl: "./dashboard/index.html",
   pricingUrl: "./pages/pricing.html",
@@ -16,13 +17,15 @@ window.CDP_SETTINGS = {
   templateHubUrl: "./tools/thumbnail-maker/index.html",
   supportEmail: "support@creatordigitalpro.com",
   apiBase: "./api",
-  licenseServerUrl: "./api", // ganti ke https://domainanda.com/api untuk ZIP yang dijual
-  requireLicense: false, // ubah true pada paket ZIP distribusi jika ingin wajib aktivasi
+  licenseServerUrl: "./api", // ganti ke https://domainanda.com/api untuk production SaaS
+  requireLicense: false, // ubah true pada production jika ingin wajib aktivasi
   midtransClientKey: "ISI_CLIENT_KEY_MIDTRANS_ANDA", // isi Client Key dari Dashboard Midtrans
   midtransMode: "sandbox", // ganti production setelah siap live
   plans: {
     free: "Free User",
-    monthly: "Premium Monthly",
-    zip: "Creator ZIP Elite"
+    demo: "Gratis Demo",
+    starter: "Starter 9K",
+    pro: "Creator Pro 49K",
+    premium: "Premium 99K"
   }
 };
