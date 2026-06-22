@@ -18,3 +18,20 @@
 .cdp-watermark-layer{position:absolute;inset:-15%;z-index:9999;pointer-events:none;display:flex;align-items:center;justify-content:center;gap:10%;transform:rotate(-24deg);opacity:.22;mix-blend-mode:screen}
 .cdp-watermark-layer span{white-space:nowrap;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.55);font:900 clamp(22px,5vw,72px) Inter,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:640px){.cdp-demo-box{padding:22px;border-radius:20px}.cdp-demo-floating-badge{right:10px;bottom:10px}.cdp-demo-box h2{font-size:22px}}
+
+
+/* Auth Gate Upgrade */
+.cdp-auth-gate{width:min(520px,calc(100% - 32px));padding:32px;background:radial-gradient(circle at 20% 0%,rgba(124,92,255,.28),transparent 34%),linear-gradient(145deg,rgba(15,23,42,.97),rgba(3,7,18,.99))}
+.cdp-demo-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;color:#fff;font-weight:900;letter-spacing:-.04em}
+.cdp-demo-brand span{width:42px;height:42px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#7c5cff,#20d7ff);font-size:13px;box-shadow:0 18px 40px rgba(32,215,255,.20)}
+.cdp-demo-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 14px}
+.cdp-demo-actions a{text-decoration:none;text-align:center}
+.cdp-demo-secondary,.cdp-demo-quick{width:100%;border-radius:16px;padding:14px 16px;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.15)}
+.cdp-demo-secondary{color:#fff;background:rgba(255,255,255,.08)}
+.cdp-demo-secondary:hover,.cdp-demo-primary:hover,.cdp-demo-quick:hover{transform:translateY(-2px)}
+.cdp-demo-quick{margin-top:14px;color:#06101d;background:linear-gradient(135deg,#facc15,#38bdf8);border:0;box-shadow:0 18px 40px rgba(56,189,248,.22)}
+.cdp-demo-divider{display:flex;align-items:center;gap:12px;margin:16px 0 4px;color:#94a3b8;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.cdp-demo-divider::before,.cdp-demo-divider::after{content:"";height:1px;flex:1;background:rgba(255,255,255,.12)}
+.cdp-demo-floating-badge{display:flex;align-items:center;gap:10px}
+.cdp-demo-floating-badge button{border:0;border-radius:999px;padding:6px 9px;background:linear-gradient(135deg,#7c5cff,#20d7ff);color:#fff;font:900 10px Inter,Arial,sans-serif;cursor:pointer;letter-spacing:0}
+@media(max-width:640px){.cdp-demo-actions{grid-template-columns:1fr}.cdp-auth-gate{padding:24px}}

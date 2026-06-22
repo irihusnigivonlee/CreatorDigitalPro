@@ -67,6 +67,18 @@
     });
   }
 
+
+
+  // Preserve next URL when switching login/register pages
+  const paramsForLinks = new URLSearchParams(window.location.search);
+  const nextForLinks = paramsForLinks.get("next");
+  if(nextForLinks){
+    const goRegister = document.getElementById("goRegister");
+    const goLogin = document.getElementById("goLogin");
+    if(goRegister) goRegister.href = `register.html?next=${encodeURIComponent(nextForLinks)}`;
+    if(goLogin) goLogin.href = `login.html?next=${encodeURIComponent(nextForLinks)}`;
+  }
+
   if(quickDemoLogin){
     quickDemoLogin.addEventListener("click", () => {
       saveDemoUser({ name:"Demo User", email:"demo@creatordigitalpro.local" });
