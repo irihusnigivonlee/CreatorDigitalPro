@@ -154,7 +154,9 @@
   }
 
   function watermarkCanvas(canvas) {
-    if (!canvas || !canvas.getContext || canvas.dataset.cdpCanvasWm === "1") return canvas;
+    // IMPORTANT: do not skip using dataset. Many tools redraw/reuse the same canvas before export.
+    // If we skip after the first watermark, the exported image/video can become clean again.
+    if (!canvas || !canvas.getContext) return canvas;
     try {
       const ctx = canvas.getContext("2d");
       const w = canvas.width;
@@ -162,21 +164,20 @@
       if (!w || !h) return canvas;
 
       ctx.save();
-      ctx.globalAlpha = 0.22;
+      ctx.globalAlpha = 0.24;
       ctx.translate(w / 2, h / 2);
       ctx.rotate(-Math.PI / 7);
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.font = `bold ${Math.max(28, Math.floor(w / 18))}px Arial, sans-serif`;
+      ctx.font = `bold ${Math.max(32, Math.floor(w / 16))}px Arial, sans-serif`;
       ctx.fillStyle = "#ffffff";
-      ctx.strokeStyle = "rgba(0,0,0,.45)";
-      ctx.lineWidth = Math.max(2, Math.floor(w / 450));
-      for (let y = -h; y <= h; y += Math.max(120, h / 4)) {
+      ctx.strokeStyle = "rgba(0,0,0,.55)";
+      ctx.lineWidth = Math.max(2, Math.floor(w / 420));
+      for (let y = -h; y <= h; y += Math.max(140, h / 3.2)) {
         ctx.strokeText(WATERMARK_TEXT, 0, y);
         ctx.fillText(WATERMARK_TEXT, 0, y);
       }
       ctx.restore();
-      canvas.dataset.cdpCanvasWm = "1";
     } catch (e) {}
     return canvas;
   }
@@ -250,6 +251,7 @@
     login: saveLogin,
     logout: function () { try { localStorage.removeItem(LOGIN_KEY); } catch(e) {} location.reload(); },
     isLoggedIn: isLoggedIn,
-    applyWatermarks: applyWatermarks
+    applyWatermarks: applyWatermarks,
+    watermarkCanvas: watermarkCanvas
   };
 })();

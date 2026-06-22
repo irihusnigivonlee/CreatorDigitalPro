@@ -295,6 +295,7 @@ exportJpgBtn.addEventListener("click",async()=>{
 
       captureWrap.remove();
 
+      if(window.CDPDemoGuard && window.CDPDemoGuard.isLoggedIn && window.CDPDemoGuard.isLoggedIn() && window.CDPDemoGuard.watermarkCanvas){window.CDPDemoGuard.watermarkCanvas(canvas);}
       const dataUrl=canvas.toDataURL("image/jpeg",0.95);
       downloadDataUrl(dataUrl,`${baseName}-halaman-${String(i+1).padStart(2,"0")}.jpg`);
 
