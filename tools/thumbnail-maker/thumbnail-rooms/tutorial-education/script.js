@@ -261,7 +261,6 @@ async function downloadPNG() {
 
     const link = document.createElement("a");
     link.download = "Tutorial-Education.png";
-    if(window.CDPDemoGuard && window.CDPDemoGuard.isLoggedIn && window.CDPDemoGuard.isLoggedIn() && window.CDPDemoGuard.watermarkCanvas){window.CDPDemoGuard.watermarkCanvas(canvas);}
     link.href = canvas.toDataURL("image/png");
     link.click();
   } catch (error) {
@@ -297,7 +296,6 @@ async function downloadJPG() {
 
     const link = document.createElement("a");
     link.download = "Tutorial-Education.jpg";
-    if(window.CDPDemoGuard && window.CDPDemoGuard.isLoggedIn && window.CDPDemoGuard.isLoggedIn() && window.CDPDemoGuard.watermarkCanvas){window.CDPDemoGuard.watermarkCanvas(canvas);}
     link.href = canvas.toDataURL("image/jpeg", 0.95);
     link.click();
   } catch (error) {

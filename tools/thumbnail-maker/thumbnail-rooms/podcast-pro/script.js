@@ -400,7 +400,6 @@ async function downloadPNG() {
 
     link.download = "CreatorDigitalPro.png";
 
-    if(window.CDPDemoGuard && window.CDPDemoGuard.isLoggedIn && window.CDPDemoGuard.isLoggedIn() && window.CDPDemoGuard.watermarkCanvas){window.CDPDemoGuard.watermarkCanvas(canvas);}
     link.href = canvas.toDataURL("image/png");
 
     link.click();
@@ -433,7 +432,6 @@ async function downloadJPG() {
 
     link.download = "CreatorDigitalPro.jpg";
 
-    if(window.CDPDemoGuard && window.CDPDemoGuard.isLoggedIn && window.CDPDemoGuard.isLoggedIn() && window.CDPDemoGuard.watermarkCanvas){window.CDPDemoGuard.watermarkCanvas(canvas);}
     link.href = canvas.toDataURL("image/jpeg", 0.95);
 
     link.click();

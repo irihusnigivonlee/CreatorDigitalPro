@@ -166,9 +166,6 @@ function drawIntro(){
   else if(currentTemplate==='islamic-premium') drawIslamicPremium(t,p);
   else drawCreatorClassic(t,p);
   ctx.save(); ctx.fillStyle='rgba(255,255,255,.22)'; ctx.fillRect(0,1064,canvas.width,16); ctx.fillStyle=accentColor; ctx.fillRect(0,1064,canvas.width*p,16); ctx.restore();
-  if(window.CDPDemoGuard && window.CDPDemoGuard.isLoggedIn && window.CDPDemoGuard.isLoggedIn() && window.CDPDemoGuard.watermarkCanvas){
-    window.CDPDemoGuard.watermarkCanvas(canvas);
-  }
 }
 function updateTimeline(){ timelineSlider.value=currentTime.toFixed(1); timelineLabel.textContent=`${currentTime.toFixed(1)}s / 10.0s`; }
 function animate(){ if(!playing) return; currentTime += 1/60; if(currentTime>=duration){currentTime=duration; playing=false; if(audioPlayer){audioPlayer.pause(); audioPlayer.currentTime=0;} if(window.webmRecorder && window.webmRecorder.state==='recording') window.webmRecorder.stop();} updateTimeline(); drawIntro(); if(playing) animationId=requestAnimationFrame(animate); }
